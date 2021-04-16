@@ -1,3 +1,3 @@
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTPHOST}%{REQUESTURI}
+RewriteCond %{REQUEST_SCHEME} =http
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
