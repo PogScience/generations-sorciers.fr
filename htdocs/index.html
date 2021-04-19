@@ -2,190 +2,37 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Générations Sorciers, un événement PogScience</title>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"/>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="Générations Sorciers, un événement PogScience">
-  <meta name="description" content="Générations Sorciers, c'est 8 jours où des émissions de vulgarisation sur l'héritage de C'est Pas Sorcier vont se succéder, avec l'équipe originale !">
+  <meta name="description"
+        content="Générations Sorciers, c'est 8 jours où des émissions de vulgarisation sur l'héritage de C'est Pas Sorcier vont se succéder, avec l'équipe originale !">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://generations-sorciers.fr/">
   <meta property="og:title" content="Générations Sorciers, un événement PogScience">
-  <meta property="og:description" content="Générations Sorciers, c'est 8 jours où des émissions de vulgarisation sur l'héritage de C'est Pas Sorcier vont se succéder, avec l'équipe originale !">
+  <meta property="og:description"
+        content="Générations Sorciers, c'est 8 jours où des émissions de vulgarisation sur l'héritage de C'est Pas Sorcier vont se succéder, avec l'équipe originale !">
   <meta property="og:image" content="https://generations-sorciers.fr/assets/logo.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://generations-sorciers.fr/">
   <meta property="twitter:title" content="Générations Sorciers, un événement PogScience">
-  <meta property="twitter:description" content="Générations Sorciers, c'est 8 jours où des émissions de vulgarisation sur l'héritage de C'est Pas Sorcier vont se succéder, avec l'équipe originale !">
+  <meta property="twitter:description"
+        content="Générations Sorciers, c'est 8 jours où des émissions de vulgarisation sur l'héritage de C'est Pas Sorcier vont se succéder, avec l'équipe originale !">
   <meta property="twitter:image" content="https://generations-sorciers.fr/assets/logo.png">
-
-  <!-- temp., will switch to SASS later -->
-  <style type="text/css">
-      :root {
-          --color-purple-light: hsl(264, 33%, 88%);
-          --color-purple: hsl(242, 49%, 51%);
-          --color-purple-dark: hsl(245, 49%, 32%);
-          --color-purple-darker: hsl(240, 54%, 10%);
-      }
-
-      body {
-          background: var(--color-purple-light);
-          font-family: Rubik, sans-serif;
-      }
-
-      section.hero {
-          border-top: solid 8px var(--color-purple);
-      }
-
-      .gs-dates {
-          margin-top: 1rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-      }
-
-      .gs-dates time {
-          display: block;
-          padding: .6rem;
-
-          background: var(--color-purple);
-          border-radius: 8px;
-
-          font-family: Poppins, sans-serif;
-          color: var(--color-purple-light);
-      }
-      .gs-dates time span {
-          display: block;
-          text-align: center;
-          font-variant: all-small-caps;
-          line-height: 1;
-      }
-      .gs-dates time span:first-child {
-          font-size: 4rem;
-      }
-      .gs-dates time span:last-child {
-          font-size: 2rem;
-      }
-      .gs-dates > span {
-          margin: 0 1.5rem;
-          font-size: 2rem;
-          font-weight: 300;
-          color: var(--color-purple-dark);
-      }
-
-      .gs-pres {
-          margin-top: 2rem;
-      }
-
-      .gs-pres h2 {
-          margin-bottom: -.6rem;
-          font-size: 1.4rem;
-          font-variant: all-small-caps;
-          font-weight: 500;
-          color: var(--color-purple-dark);
-      }
-
-      .gs-pres p.headline {
-          font-size: 3.4rem;
-          font-family: Poppins, sans-serif;
-          font-weight: 500;
-          letter-spacing: -2px;
-      }
-
-      .gs-pres p {
-          margin-bottom: 1.5rem;
-          color: var(--color-purple-dark);
-          font-size: 1.6rem;
-      }
-
-      .gs-pres p strong {
-          font-weight: 500;
-          color: var(--color-purple-dark);
-      }
-
-      .gs-pres .buttons {
-          margin-top: 5rem;
-      }
-	  
-	  .gs-widgets {
-		  display: inline-blocks;
-		  width: 50%;
-		  margin: auto;
-		  max-width: 500px;
-	  }
-
-      a.button.is-ghost {
-          color: var(--color-purple);
-      }
-      a.button.is-ghost:hover {
-          color: var(--color-purple-dark);
-      }
-      a.button.is-purple {
-          background-color: var(--color-purple-dark);
-          border-color: transparent;
-          color: var(--color-purple-light);
-      }
-      a.button.is-purple:hover {
-          background-color: var(--color-purple);
-      }
-
-      a.button.is-ghost:focus, a.button.is-purple:focus {
-          box-shadow: 0 0 0 .125em var(--color-purple-darker);
-      }
-
-      @media screen and (max-width: 768px){
-          div.gs-columns {
-              display: flex;
-              flex-direction: column-reverse;
-          }
-
-          .hero-body {
-              padding-top: 2rem;
-          }
-
-          .gs-pres {
-              margin-top: .4rem;
-              margin-bottom: 3rem;
-          }
-
-          .gs-pres h2 {
-              margin-bottom: .4rem;
-              line-height: 1;
-          }
-
-          .gs-pres p.headline {
-              line-height: 1;
-          }
-
-          .gs-pres .buttons {
-              justify-content: center;
-          }
-
-          .gs-logo-dates {
-              display: flex;
-              flex-direction: column-reverse;
-          }
-
-          .gs-logo-dates .gs-dates {
-              margin-bottom: 2rem;
-          }
-		  
-		  .gs-widgets {
-              width: 100%;
-          }
-      }
-  </style>
 </head>
 
 <body>
@@ -196,7 +43,7 @@
       <div class="columns gs-columns">
         <div class="column is-5 gs-logo-dates">
           <figure class="gs-logo">
-            <img src="assets/logo.png" alt="Générations Sorciers" />
+            <img src="assets/logo.png" alt="Générations Sorciers"/>
           </figure>
           <aside class="gs-dates">
             <time datetime="2021-04-26">
@@ -218,7 +65,8 @@
           </p>
           <p>
             <strong>Une semaine de streams</strong> sur Twitch dédiée aux jeunes, étudiants et jeunes travailleurs.
-			Si tu as besoin d'aide en ce moment, n'hésite pas à contacter le <a href="https://www.filsantejeunes.com/" target="_blank">Fil Santé Jeunes</a> !
+            Si tu as besoin d'aide en ce moment, n'hésite pas à contacter le <a href="https://www.filsantejeunes.com/"
+                                                                                target="_blank">Fil Santé Jeunes</a> !
           </p>
           <p>
             Huit jours, une vingtaine de streams, autant de streamers, et bien sûr <strong>des sorciers</strong> !
@@ -227,21 +75,26 @@
           <p><em>Le programme sera prochainement disponible sur cette page.</em></p>
 
           <p class="buttons">
-            <a href="https://discord.gg/rwqmYnaSK2" class="button is-purple is-large" target="_blank">Rejoindre le Discord</a>
+            <a href="https://discord.gg/rwqmYnaSK2" class="button is-purple is-large" target="_blank">Rejoindre le
+              Discord</a>
             <!--<a href="https://twitter.com/PogScience" class="button is-ghost is-large" target="_blank">Twitter</a>-->
             <a href="#" class="button is-ghost is-large">Presse</a>
           </p>
         </div>
-      </div> 
+      </div>
     </article>
-	<div class="hero-body columns gs-columns">
-		<div class="column gs-widgets">
-			<iframe src="https://ptb.discord.com/widget?id=674395850499424256&theme=dark" width=100% height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-		</div>
-		<div class="column gs-widgets">
-			<a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/PogScience?ref_src=twsrc%5Etfw" target="_blank">Tweets by PogScience</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-	</div>
+    <div class="hero-body columns gs-columns">
+      <div class="column gs-widgets">
+        <iframe src="https://ptb.discord.com/widget?id=674395850499424256&theme=dark" width=100% height="500"
+                allowtransparency="true" frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+      <div class="column gs-widgets">
+        <a class="twitter-timeline" data-height="500" data-theme="light"
+           href="https://twitter.com/PogScience?ref_src=twsrc%5Etfw" target="_blank">Tweets by PogScience</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
   </div>
 </section>
 

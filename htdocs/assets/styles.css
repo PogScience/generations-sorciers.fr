@@ -1,0 +1,169 @@
+:root {
+    --color-purple-light: hsl(264, 33%, 88%);
+    --color-purple: hsl(242, 49%, 51%);
+    --color-purple-dark: hsl(245, 49%, 32%);
+    --color-purple-darker: hsl(245, 54%, 19%);
+    --color-purple-darkest: hsl(240, 54%, 10%);
+}
+
+body {
+    background: var(--color-purple-light);
+    font-family: Rubik, sans-serif;
+}
+
+section.hero {
+    border-top: solid 8px var(--color-purple);
+}
+
+a {
+    color: var(--color-purple);
+}
+a:hover {
+    color: var(--color-purple-darker);
+}
+
+.gs-dates {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-dates time {
+    display: block;
+    padding: .6rem;
+
+    background: var(--color-purple);
+    border-radius: 8px;
+
+    font-family: Poppins, sans-serif;
+    color: var(--color-purple-light);
+}
+
+.gs-dates time span {
+    display: block;
+    text-align: center;
+    font-variant: all-small-caps;
+    line-height: 1;
+}
+
+.gs-dates time span:first-child {
+    font-size: 4rem;
+}
+
+.gs-dates time span:last-child {
+    font-size: 2rem;
+}
+
+.gs-dates > span {
+    margin: 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color-purple-dark);
+}
+
+.gs-pres {
+    margin-top: 2rem;
+}
+
+.gs-pres h2 {
+    margin-bottom: -.6rem;
+    font-size: 1.4rem;
+    font-variant: all-small-caps;
+    font-weight: 500;
+    color: var(--color-purple-dark);
+}
+
+.gs-pres p.headline {
+    font-size: 3.4rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.gs-pres p {
+    margin-bottom: 1.5rem;
+    color: var(--color-purple-dark);
+    font-size: 1.6rem;
+}
+
+.gs-pres p strong {
+    font-weight: 500;
+    color: var(--color-purple-dark);
+}
+
+.gs-pres .buttons {
+    margin-top: 5rem;
+}
+
+.gs-widgets {
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    max-width: 500px;
+}
+
+a.button.is-ghost {
+    color: var(--color-purple);
+}
+
+a.button.is-ghost:hover {
+    color: var(--color-purple-dark);
+}
+
+a.button.is-purple {
+    background-color: var(--color-purple-dark);
+    border-color: transparent;
+    color: var(--color-purple-light);
+}
+
+a.button.is-purple:hover {
+    background-color: var(--color-purple);
+}
+
+a.button.is-ghost:focus, a.button.is-purple:focus {
+    box-shadow: 0 0 0 .125em var(--color-purple-darkest);
+}
+
+@media screen and (max-width: 768px) {
+    div.gs-columns {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hero-body {
+        padding-top: 2rem;
+    }
+
+    .gs-pres {
+        margin-top: .4rem;
+        margin-bottom: 3rem;
+    }
+
+    .gs-pres h2 {
+        margin-bottom: .4rem;
+        line-height: 1;
+    }
+
+    .gs-pres p.headline {
+        line-height: 1;
+    }
+
+    .gs-pres .buttons {
+        justify-content: center;
+    }
+
+    .gs-logo-dates {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .gs-logo-dates .gs-dates {
+        margin-bottom: 2rem;
+    }
+
+    .gs-widgets {
+        width: 100%;
+    }
+}
