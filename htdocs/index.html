@@ -1,30 +1,228 @@
-<!doctype html>
-  <head>
-    <meta charset="utf-8">
-    <title>Website under construction</title>
-    <meta name="description" content="Default page for simple hosting clients">
+<!DOCTYPE html>
+<html lang="fr">
 
-    <!-- Matomo -->
-    <script type="text/javascript">
-      var _paq = window._paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://generationssorciers.matomo.cloud/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Générations Sorciers</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <!-- temp., will switch to SASS later -->
+  <style type="text/css">
+      :root {
+          --color-purple-light: hsl(264, 33%, 88%);
+          --color-purple: hsl(242, 49%, 51%);
+          --color-purple-dark: hsl(245, 49%, 32%);
+          --color-purple-darker: hsl(240, 54%, 10%);
+      }
+
+      body {
+          background: var(--color-purple-light);
+          font-family: Rubik, sans-serif;
+      }
+
+      section.hero {
+          border-top: solid 8px var(--color-purple);
+      }
+
+      .gs-dates {
+          margin-top: 1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .gs-dates time {
+          display: block;
+          padding: .6rem;
+
+          background: var(--color-purple);
+          border-radius: 8px;
+
+          font-family: Poppins, sans-serif;
+          color: var(--color-purple-light);
+      }
+      .gs-dates time span {
+          display: block;
+          text-align: center;
+          font-variant: all-small-caps;
+          line-height: 1;
+      }
+      .gs-dates time span:first-child {
+          font-size: 4rem;
+      }
+      .gs-dates time span:last-child {
+          font-size: 2rem;
+      }
+      .gs-dates > span {
+          margin: 0 1.5rem;
+          font-size: 2rem;
+          font-weight: 300;
+          color: var(--color-purple-dark);
+      }
+
+      .gs-pres {
+          margin-top: 2rem;
+      }
+
+      .gs-pres h2 {
+          margin-bottom: -.6rem;
+          font-size: 1.4rem;
+          font-variant: all-small-caps;
+          font-weight: 500;
+          color: var(--color-purple-dark);
+      }
+
+      .gs-pres p.headline {
+          font-size: 3.4rem;
+          font-family: Poppins, sans-serif;
+          font-weight: 500;
+          letter-spacing: -2px;
+      }
+
+      .gs-pres p {
+          margin-bottom: 1.5rem;
+          color: var(--color-purple-dark);
+          font-size: 1.6rem;
+      }
+
+      .gs-pres p strong {
+          font-weight: 500;
+          color: var(--color-purple-dark);
+      }
+
+      .gs-pres .buttons {
+          margin-top: 5rem;
+      }
+
+      a.button.is-ghost {
+          color: var(--color-purple);
+      }
+      a.button.is-ghost:hover {
+          color: var(--color-purple-dark);
+      }
+      a.button.is-purple {
+          background-color: var(--color-purple-dark);
+          border-color: transparent;
+          color: var(--color-purple-light);
+      }
+      a.button.is-purple:hover {
+          background-color: var(--color-purple);
+      }
+
+      a.button.is-ghost:focus, a.button.is-purple:focus {
+          box-shadow: 0 0 0 .125em var(--color-purple-darker);
+      }
+
+      @media screen and (max-width: 768px){
+          div.gs-columns {
+              display: flex;
+              flex-direction: column-reverse;
+          }
+
+          .hero-body {
+              padding-top: 2rem;
+          }
+
+          .gs-pres {
+              margin-top: .4rem;
+              margin-bottom: 3rem;
+          }
+
+          .gs-pres h2 {
+              margin-bottom: .4rem;
+              line-height: 1;
+          }
+
+          .gs-pres p.headline {
+              line-height: 1;
+          }
+
+          .gs-pres .buttons {
+              justify-content: center;
+          }
+
+          .gs-logo-dates {
+              display: flex;
+              flex-direction: column-reverse;
+          }
+
+          .gs-logo-dates .gs-dates {
+              margin-bottom: 2rem;
+          }
+      }
+  </style>
+</head>
+
+<body>
+
+<section class="hero is-fullheight">
+  <div class="container">
+    <article class="hero-body">
+      <div class="columns gs-columns">
+        <div class="column is-5 gs-logo-dates">
+          <figure class="gs-logo">
+            <img src="assets/logo.png" alt="Générations Sorciers" />
+          </figure>
+          <aside class="gs-dates">
+            <time datetime="2021-04-26">
+              <span>26</span>
+              <span>avril</span>
+            </time>
+            <span>—</span>
+            <time datetime="2021-05-03">
+              <span>03</span>
+              <span>mai</span>
+            </time>
+          </aside>
+        </div>
+
+        <div class="column gs-pres">
+          <h2>PogScience et l'équipe de <em>C'est pas Sorcier</em> présentent</h2>
+          <p class="headline">
+            Générations Sorciers
+          </p>
+          <p>
+            <strong>Une semaine de streams</strong> sur Twitch dédiée aux jeunes, étudiants et jeunes travailleurs,
+            en partenariat avec le Fil Santé Jeunes.
+          </p>
+          <p>
+            Huit jours, une vingtaine de streams, autant de streamers, et bien sûr <strong>des sorciers</strong> !
+          </p>
+
+          <p><em>Le programme sera prochainement disponible sur cette page.</em></p>
+
+          <p class="buttons">
+            <a href="#" class="button is-purple is-large">Rejoindre le Discord</a>
+            <a href="#" class="button is-ghost is-large">Presse</a>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "https://generationssorciers.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
         _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/generationssorciers.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <!-- End Matomo Code -->
-  </head>
-  <body>
-       <b>It works!</b><br />
-       <br />
-       This is the server's temporary default web page.<br />
-       The web server software is running but no content has been added yet.
-  </body>
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.src = '//cdn.matomo.cloud/generationssorciers.matomo.cloud/matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+</script>
+</body>
 </html>
-
