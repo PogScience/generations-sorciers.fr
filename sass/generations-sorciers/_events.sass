@@ -22,8 +22,16 @@
       font-family: Poppins, sans-serif
       color: $purple-lighter
 
+      &:not(:first-child)
+        margin-top: 2.5rem
+
     article
       color: $dark
+
+      &.is-final
+        &, summary .is-event-description p.subtitle
+          background-color: $purple-darker
+          color: $purple-lighter
 
       details
         summary
@@ -45,7 +53,6 @@
 
             font-size: 2.2rem
             font-weight: 400
-            color: $purple-darker
 
             +mobile
               display: none
@@ -64,6 +71,9 @@
                 margin-bottom: .4rem
 
               span.live
+                position: relative
+                top: -1px
+
                 vertical-align: middle
 
                 margin-right: .4rem
@@ -76,6 +86,11 @@
                 font-family: Rubik, sans-serif
                 font-size: 1rem
 
+            p.subtitle
+              font-size: 1.7rem
+              color: $dark
+              margin-bottom: .4rem
+
             p.streamers
               font-size: 1.2rem
 
@@ -86,7 +101,7 @@
             align-items: center
 
             +mobile
-              margin: .4rem 0
+              margin: 1rem 0 .4rem 0
 
             .is-mobile-time
               display: none
@@ -96,7 +111,6 @@
                 flex: 4
                 font-size: 1.8rem
                 font-weight: 400
-                color: $purple-darker
 
             .button
               +mobile
@@ -111,6 +125,8 @@
               line-height: 0
               transition: transform .2s ease-in-out
 
+              cursor: pointer
+
         &[open] summary aside .icon.is-caret
           transform: rotate(180deg)
 
@@ -119,5 +135,4 @@
           border-top: solid 1px $grey
           padding-top: 1rem
 
-          font-size: 1.2rem
-          color: $dark
+          font-size: 1.3rem
