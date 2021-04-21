@@ -6,7 +6,7 @@
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
         <div class="column is-4">
-            <a class="twitter-timeline" data-height="500" data-theme="light"
+            <a class="twitter-timeline" data-height="500" data-theme="light" data-dnt="true"
                href="https://twitter.com/PogScience?ref_src=twsrc%5Etfw" target="_blank">Tweets by PogScience</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
