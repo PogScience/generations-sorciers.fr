@@ -1,0 +1,15 @@
+Pour compiler le SASS, lancer :
+
+./build.sh
+
+En développement, pour recompiler au moindre changement :
+
+./build.sh watch
+
+Ça active également les sourcemaps pour avoir les références des
+fichiers SASS dans la console du navigateur, et ne compresse pas
+le CSS.
+
+Il faut avoir sass d'installé, cf. https://sass-lang.com/install
+
+Ne pas oublier de compiler avant de commit en cas de changement :)

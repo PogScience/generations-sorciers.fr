@@ -1,0 +1,95 @@
+section.hero
+  margin-bottom: $sections-horizontal-padding
+  border-top: solid 8px $purple
+  background: $purple-light
+
+.gs-dates
+  margin-top: 1rem
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+  time
+    display: block
+    padding: .6rem
+    background: $purple
+    border-radius: 8px
+    font-family: Poppins, sans-serif
+    color: $purple-light
+
+    span
+      display: block
+      text-align: center
+      font-variant: all-small-caps
+      line-height: 1
+
+      &:first-child
+        font-size: 4rem
+
+      &:last-child
+        font-size: 2rem
+
+  > span
+    margin: 0 1.5rem
+    font-size: 2rem
+    font-weight: 300
+    color: $purple-dark
+
+.gs-pres
+  margin-top: 2rem
+
+  h2
+    margin-bottom: -.6rem
+    font-size: 1.4rem
+    font-variant: all-small-caps
+    font-weight: 500
+    color: $purple-dark
+
+  p
+    &.headline
+      font-size: 3.4rem
+      font-family: Poppins, sans-serif
+      font-weight: 500
+      letter-spacing: -2px
+
+    margin-bottom: 1.5rem
+    color: $purple-dark
+    font-size: 1.6rem
+
+    strong
+      font-weight: 500
+      color: $purple-dark
+
+  .buttons
+    margin-top: 5rem
+
+
++mobile
+  div.gs-columns
+    display: flex
+    flex-direction: column-reverse
+
+  .hero-body
+    padding-top: 2rem
+
+  .gs-pres
+    margin-top: .4rem
+    margin-bottom: 3rem
+
+    h2
+      margin-bottom: .4rem
+      line-height: 1
+
+    p.headline
+      line-height: 1
+
+    .buttons
+      justify-content: center
+
+  .gs-logo-dates
+    display: flex
+    flex-direction: column-reverse
+
+    .gs-dates
+      margin-bottom: 2rem

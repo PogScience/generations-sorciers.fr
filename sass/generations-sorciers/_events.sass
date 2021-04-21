@@ -1,0 +1,122 @@
+.gs-events
+  h1
+    font-size: 2.1rem
+    font-family: Poppins, sans-serif
+    color: $purple-lighter
+    text-align: right
+
+    +mobile
+      text-align: center
+      margin-bottom: $sections-horizontal-padding
+
+    span
+      display: block
+      font-size: 3.2rem
+
+  .is-events-list
+    margin-top: 1rem
+
+    h2
+      @extend .title
+      font-size: 1.8rem
+      font-family: Poppins, sans-serif
+      color: $purple-lighter
+
+    article
+      color: $dark
+
+      details
+        summary
+          display: flex
+          align-items: center
+
+          +mobile
+            display: block
+
+          ::marker, ::-webkit-details-marker
+            display: none
+
+          > *
+            display: block
+
+          > time
+            width: 7rem
+            margin-right: 1rem
+
+            font-size: 2.2rem
+            font-weight: 400
+            color: $purple-darker
+
+            +mobile
+              display: none
+
+          > .is-event-description
+            flex: 4
+
+            h3
+              font-size: 1.8rem
+              font-weight: 500
+              font-family: Poppins, sans-serif
+
+              +mobile
+                font-size: 1.6rem
+                line-height: 1.2
+                margin-bottom: .4rem
+
+              span.live
+                vertical-align: middle
+
+                margin-right: .4rem
+                padding: .2rem .4rem
+                border-radius: 4px
+
+                background-color: $red
+                color: $white
+
+                font-family: Rubik, sans-serif
+                font-size: 1rem
+
+            p.streamers
+              font-size: 1.2rem
+
+          > aside
+            margin-left: 1rem
+
+            display: flex
+            align-items: center
+
+            +mobile
+              margin: .4rem 0
+
+            .is-mobile-time
+              display: none
+
+              +mobile
+                display: block
+                flex: 4
+                font-size: 1.8rem
+                font-weight: 400
+                color: $purple-darker
+
+            .button
+              font-size: 1rem
+              .icon.is-large
+                width: 1.4rem
+                height: 1.4rem
+
+            .icon.is-caret
+              margin-left: 1rem
+
+              line-height: 0
+              transition: transform .2s ease-in-out
+
+        &[open] summary aside .icon.is-caret
+          transform: rotate(180deg)
+
+        .content
+          margin-top: 1.2rem
+          border-top: solid 1px $grey
+          padding-top: 1rem
+
+          font-size: 1.2rem
+          color: $dark
