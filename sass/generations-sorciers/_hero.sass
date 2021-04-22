@@ -3,12 +3,29 @@ section.hero
   border-top: solid 8px $purple
   background: $purple-light
 
+  +mobile
+    .hero-body
+      padding-top: 2rem
+
+div.gs-columns
+  +mobile
+    display: flex
+    flex-direction: column-reverse
+
+.gs-logo-dates
+  +mobile
+    display: flex
+    flex-direction: column-reverse
+
 .gs-dates
   margin-top: 1rem
   display: flex
   flex-direction: row
   align-items: center
   justify-content: center
+
+  +mobile
+    margin-bottom: 2rem
 
   time
     display: block
@@ -39,12 +56,20 @@ section.hero
 .gs-pres
   margin-top: 2rem
 
+  +mobile
+    margin-top: .4rem
+    margin-bottom: 3rem
+
   h2
     margin-bottom: -.6rem
     font-size: 1.4rem
     font-variant: all-small-caps
     font-weight: 500
     color: $purple-dark
+
+    +mobile
+      margin-bottom: .4rem
+      line-height: 1
 
   p
     &.headline
@@ -53,9 +78,16 @@ section.hero
       font-weight: 500
       letter-spacing: -2px
 
+      +mobile
+        font-size: 3rem
+        line-height: 1
+
     margin-bottom: 1.5rem
     color: $purple-dark
     font-size: 1.6rem
+
+    +mobile
+      font-size: 1.36rem
 
     strong
       font-weight: 500
@@ -64,32 +96,9 @@ section.hero
   .buttons
     margin-top: 5rem
 
-
-+mobile
-  div.gs-columns
-    display: flex
-    flex-direction: column-reverse
-
-  .hero-body
-    padding-top: 2rem
-
-  .gs-pres
-    margin-top: .4rem
-    margin-bottom: 3rem
-
-    h2
-      margin-bottom: .4rem
-      line-height: 1
-
-    p.headline
-      line-height: 1
-
-    .buttons
+    +mobile
       justify-content: center
 
-  .gs-logo-dates
-    display: flex
-    flex-direction: column-reverse
-
-    .gs-dates
-      margin-bottom: 2rem
+      a.button:first-child
+        display: block
+        margin-right: 0
