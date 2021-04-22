@@ -13,3 +13,49 @@ le CSS.
 Il faut avoir sass d'installé, cf. https://sass-lang.com/install
 
 Ne pas oublier de compiler avant de commit en cas de changement :)
+
+---
+
+Les dépendances PHP sont gérées par Composer (le standard du marché).
+Une fois installé (cf. site officiel),
+
+composer install -a
+
+pour télécharger et installer les dépendances. Pour plus de simplicité,
+les dépendances sont dans le dépôt, donc normalement y'a rien à faire.
+Elles sont stockées dans le dossier vendor (il ne faut pas y toucher !).
+
+Composer gère également l'autoload, pour éviter d'avoir à require_once
+toutes les classes. En cas d'ajout ou de déplacement de classes, comme
+on utilise l'autoloader optimisé, il faut exécuter :
+
+composer dump-autoload -a
+
+---
+
+Les événements sont dans data/events.yaml. Une liste d'objets (reprendre le
+modèle existant, sans oublier le tiret de la liste) avec ces propriétés possibles :
+
+- title: Le titre qui s'affiche en gros
+  subtitle: Le sous-titre (facultatif, affiché moins gros dessous)
+  streamer: Le nom du ou de la streamer/euse (affiché en dessous avec le lien) (facultatif si on ne veut pas mettre le streamer en avant)
+  link: Un lien (https://…), ou juste un nom de chaîne twitch
+  with: Texte écrit à côté du nom du streamer après le point de séparation (facultatif)
+  description: |
+    Une description qui peut s'étendre sur plusieurs lignes
+    de l'événement. Elle sera affichée au clic sur l'événement, dans une zone à part.
+
+    On peut vraiment prendre la place.
+  date: 2021-04-26 20:00:00
+  duration: 2 hours
+  final: true/false (si true, l'événement sera affiché avec plus de marges et un fond différent).
+
+Le format de `date` est n'importe quel format de date supporté par YAML (le plus simple étant probablement YYYY-MM-DD HH:mm).
+
+Le format de `duration` est du style de « 2 hours » ou « 30 minutes » ou une combinaison (possible aussi d'utiliser
+days, years, months, mais je doute que ce soit utile c: ).
+
+Tous les champs qui acceptent du texte peuvent être formatés en Markdown. Voir : https://www.markdownguide.org/cheat-sheet/
+(Discord utilise une version simplifiée du MD, donc ce qui marche sur Discord marchera ici, mais certains trucs en plus comme
+des titres, listes, ou liens, marcheront aussi. La seule différence est qu'en Markdown, il faut laisser une ligne vide pour
+sauter une ligne.)

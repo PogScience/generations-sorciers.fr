@@ -1,0 +1,72 @@
+- title: La littérature comme _réconfort_
+  streamer: Professeur Klotho
+  link: professeurklotho
+  with: Avec Sabine Quindou et Valérie Guerlain
+  description: |
+    Les livres ou textes **feel good**, avec commentaire de textes et/ou anecdotes.
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda
+    dignissimos eius enim eos exercitationem expedita facilis ipsum maiores minima
+    mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.
+  date: 2021-04-21 02:00:00
+  duration: 2 hours
+
+- title: Bidouiller, c'est pas sorcier !
+  streamer: ioodyme
+  link: ioodyme
+  with: Avec Qu'est-ce que tu GEEKes
+  description: |
+    Analyse de la fabrication des maquettes et reproduction avec des outils modernes,
+    en collaboration avec Qu'est-ce que tu GEEKes
+
+    Y’a quoi dans un labo ? Visite d’un laboratoire de biologie moléculaire. Présentation
+    des appareils de mesures, cultures, etc.
+
+    Electronique,programmation, expérience scientifique à la maison, modélisation / impression 3D.
+  date: 2021-04-21 08:00:00
+  duration: 6 days
+
+- title: De la maquette au numérique, il n’y a rien de sorcier !
+  streamer: ioodyme
+  link: ioodyme
+  with: Avec Qu'est-ce que tu GEEKes
+  description: |
+    Parler des maquettes CPS, des maquettes qu’on utilise encore aujourd’hui et de l’apport de
+    l'électronique et du numérique.
+  date: 2021-04-27 17:30:00
+  duration: 2 hours
+
+- title: Vulgariser a des vertus insoupçonnées !
+  subtitle: Table ronde
+  streamer: Julien Dassa-Terrier
+  link: dassa_ju
+  with: |
+    Avec [Elodie Chabrol](https://www.elodiechabrol.com), [Hycarius](http://hycarius.fr/), [Amaury Carrade](https://zestedesavoir.com),
+    [Mathilde de _Bien dans ma Thèse_](https://www.biendansmathese.com/), et Sabine Quindou
+  description: |
+    Comment vulgariser peut être une démarche positive, utile et valorisante ?
+  date: 2021-04-27 20:00:00
+  duration: 2 hours 30 minutes
+
+- title: Sorciers Solidaires
+  subtitle: La libre-antenne de clôture avec tout le monde !
+  link: collectifconscience
+  with: Avec Jamy Gourmaud, Fred Courant, Sabine Quindou, Valérie Guerlain (la petite voix), … [j'ai oublié les autres honte sur moi]
+  description: |
+    Beaucoup de choses au programme !
+
+    ### Première partie
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda dignissimos eius enim eos exercitationem expedita facilis
+    ipsum maiores minima mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.
+
+    ### Seconde partie
+
+    Alors là c'est plus compliqué.
+
+    - Parce que voilà.
+    - C'est dur la vie.
+    - Et sinon vous [ça va ?](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+  date: 2021-05-03 20:00:00
+  duration: 3 hours
+  final: true

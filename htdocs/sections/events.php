@@ -1,10 +1,24 @@
 <?php
+use PogScience\EventsManager;
+
 function twitch() {
     include "../svg/twitch.svg";
 }
 function caret() {
   include "../svg/caret.svg";
 }
+
+$events = new EventsManager();
+$events->load();
+
+$fmt = new IntlDateFormatter(
+    'fr_FR',
+    IntlDateFormatter::FULL,
+    IntlDateFormatter::FULL,
+    'Europe/Paris',
+    IntlDateFormatter::GREGORIAN,
+    'EEEE d MMMM'
+);
 ?>
 
 <section class="section container gs-events" id="programme">
@@ -13,121 +27,67 @@ function caret() {
             <h1><span>Demandez</span> le programme</h1>
         </div>
         <div class="column is-events-list">
-            <h2>Lundi 26 avril</h2>
+            <?php foreach ($events->events as $day => $day_events): ?>
+                <h2><?php echo ucfirst($fmt->format(DateTime::createFromFormat('Y-m-d', $day))) ?></h2>
 
-            <article class="box">
-                <details>
-                    <summary>
-                        <time datetime="">
-                            20h
-                        </time>
+                <?php /** @var \PogScience\Event $event */
+                foreach ($day_events as $event): ?>
 
-                        <div class="is-event-description">
-                            <h3><span class="live">LIVE</span> La littérature comme réconfort</h3>
-                            <p class="streamers">
-                                <a href="#">Professeur Klotho</a>
-                                &nbsp;&middot;&nbsp;
-                                Avec Sabine Quindou et Valérie Guerlain
-                            </p>
-                        </div>
+                    <article class="box<?php if ($event->final) echo ' is-final' ?><?php if ($event->past()) echo ' is-past' ?>">
+                        <details>
+                            <summary>
+                                <time datetime="<?php echo $event->dateISO() ?>">
+                                    <?php echo $event->hour() ?>
+                                </time>
 
-                        <aside>
-                            <time datetime="" class="is-mobile-time" aria-hidden="true">20h</time>
+                                <div class="is-event-description">
+                                    <h3><?php if ($event->live()): ?><a href="<?php echo $event->link ?>" class="live" title="<?php echo strip_tags($event->streamer) ?> est actuellement en direct ! Cliquez pour accéder au live">LIVE</a> <?php endif; echo $event->title ?></h3>
 
-                            <a href="#" class="button is-primary is-large" title="Aller sur la chaîne sur Twitch">
-                              <span class="icon is-large">
-                                <?php twitch(); ?>
-                              </span>
-                            </a>
+                                    <?php if ($event->subtitle): ?>
+                                    <p class="subtitle"><?php echo $event->subtitle ?></p>
+                                    <?php endif ?>
 
-                            <span class="icon is-caret">
-                                <?php caret(); ?>
-                            </span>
-                        </aside>
-                    </summary>
+                                    <p class="streamers">
+                                        <?php if ($event->streamer): ?>
+                                        <a href="<?php echo $event->link ?>"><?php echo $event->streamer ?></a>
+                                        <?php endif; if ($event->streamer && $event->with): ?>
+                                        &nbsp;&middot;&nbsp;
+                                        <?php
+                                            endif;
+                                            if ($event->with):
+                                                echo $event->with;
+                                            endif;
+                                        ?>
+                                    </p>
+                                </div>
 
-                    <div class="content">
-                        <p>Les livres ou textes feel good, avec commentaire de textes et/ou anecdotes.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda dignissimos eius enim eos exercitationem expedita facilis ipsum maiores minima mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.</p>
-                    </div>
-                </details>
-            </article>
+                                <aside>
+                                    <time datetime="<?php echo $event->dateISO() ?>" class="is-mobile-time" aria-hidden="true"><?php echo $event->hour() ?></time>
 
-            <article class="box">
-                <details>
-                    <summary>
-                        <time datetime="">
-                            22h30
-                        </time>
+                                    <a href="<?php echo $event->link ?>" class="button is-primary is-large" title="Aller sur la chaîne sur Twitch de <?php echo strip_tags($event->streamer) ?>">
+                                      <span class="icon is-large">
+                                        <?php twitch(); ?>
+                                        </span>
+                                    </a>
 
-                        <div class="is-event-description">
-                            <h3>La littérature comme révolution communiste stalinienne (long titre de test)</h3>
-                            <p class="streamers">
-                                <a href="#">Professeur Klotho</a>
-                                &nbsp;&middot;&nbsp;
-                                Avec Sabine Quindou et Valérie Guerlain et Sabine Quindou et Valérie Guerlain et Sabine
-                                Quindou et Valérie Guerlain.
-                            </p>
-                        </div>
+                                    <?php if ($event->description): ?>
+                                    <span class="icon is-caret">
+                                        <?php caret(); ?>
+                                    </span>
+                                    <?php endif; ?>
+                                </aside>
+                            </summary>
 
-                        <aside>
-                            <time datetime="" class="is-mobile-time" aria-hidden="true">22h30</time>
+                            <?php if ($event->description): ?>
+                                <div class="content">
+                                    <?php echo $event->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </details>
+                    </article>
 
-                            <a href="#" class="button is-primary is-large" title="Aller sur la chaîne sur Twitch">
-                              <span class="icon is-large">
-                                <?php twitch(); ?>
-                              </span>
-                            </a>
-                            <span class="icon is-caret">
-                                <?php caret(); ?>
-                            </span>
-                        </aside>
-                    </summary>
-
-                    <div class="content">
-                        <p>Les livres ou textes feel good, avec commentaire de textes et/ou anecdotes.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda dignissimos eius enim eos exercitationem expedita facilis ipsum maiores minima mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.</p>
-                    </div>
-                </details>
-            </article>
-
-            <h2>Lundi 03 mars</h2>
-
-            <article class="box is-final">
-                <details>
-                    <summary>
-                        <time datetime="">
-                            20h
-                        </time>
-
-                        <div class="is-event-description">
-                            <h3><span class="live">LIVE</span> Sorciers Solidaires</h3>
-                            <p class="subtitle">La libre-antenne de clôture avec tout le monde !</p>
-                            <p class="streamers">
-                                Avec Jamy Gourmaud, Fred Courant, Sabine Quindou, Valérie Guerlain (la petite voix), …
-                            </p>
-                        </div>
-
-                        <aside>
-                            <time datetime="" class="is-mobile-time" aria-hidden="true">20h</time>
-
-                            <a href="#" class="button is-primary is-large" title="Aller sur la chaîne sur Twitch">
-                              <span class="icon is-large">
-                                <?php twitch(); ?>
-                              </span>
-                            </a>
-                            <span class="icon is-caret">
-                                <?php caret(); ?>
-                            </span>
-                        </aside>
-                    </summary>
-
-                    <div class="content">
-                        <p>Les livres ou textes feel good, avec commentaire de textes et/ou anecdotes.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda dignissimos eius enim eos exercitationem expedita facilis ipsum maiores minima mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.</p>
-                    </div>
-                </details>
-            </article>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

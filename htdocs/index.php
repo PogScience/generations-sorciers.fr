@@ -1,3 +1,12 @@
+<?php
+    if (isset($_GET['preview']) && $_GET['preview'] === '997d097f') {
+        define('GS_PREVIEW', 'true');
+    }
+
+    if (defined('GS_PREVIEW')) {
+        require_once '../vendor/autoload.php';
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -38,10 +47,6 @@
 <body>
 
 <?php
-    if (isset($_GET['preview']) && $_GET['preview'] === "997d097f") {
-        define("GS_PREVIEW", "true");
-    }
-
     include "sections/description.php";
 
     if (defined("GS_PREVIEW")) {

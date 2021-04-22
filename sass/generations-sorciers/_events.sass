@@ -26,12 +26,34 @@
         margin-top: 2.5rem
 
     article
-      color: $dark
+      color: $darker
+
+      .content
+        h1, h2, h3, h4, h5, h6
+          color: $darker
+          font-weight: 500
+          font-family: Poppins, sans-serif
 
       &.is-final
         &, summary .is-event-description p.subtitle
           background-color: $purple-darker
           color: $purple-lighter
+        .content
+          h1, h2, h3, h4, h5, h6
+            color: $purple-lighter
+          a
+            color: $purple-somewhat-light
+
+            &:hover
+              color: $purple-lighter
+
+      &.is-past
+        &,
+        summary time,
+        summary .is-event-description h3,
+        summary .is-event-description p.subtitle
+          background-color: $purple-somewhat-light
+          color: $dark
 
       details
         summary
@@ -70,7 +92,7 @@
                 line-height: 1.2
                 margin-bottom: .4rem
 
-              span.live
+              a.live
                 position: relative
                 top: -1px
 
@@ -87,8 +109,8 @@
                 font-size: 1rem
 
             p.subtitle
-              font-size: 1.7rem
-              color: $dark
+              font-size: 1.5rem
+              color: $darker
               margin-bottom: .4rem
 
             p.streamers

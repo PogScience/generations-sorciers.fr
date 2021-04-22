@@ -1,0 +1,22 @@
+{
+    "name": "pogscience/generations-sorciers",
+    "description": "Site de l'événement Générations Sorciers de PogScience",
+    "type": "project",
+    "require": {
+        "erusev/parsedown": "^1.7",
+        "symfony/yaml": "^5.2",
+        "ext-intl": "*"
+    },
+    "license": "CeCILL",
+    "authors": [
+        {
+            "name": "Amaury Carrade",
+            "email": "amaury@carrade.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PogScience\\":"src/"
+        }
+    }
+}
