@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap')
 
-
 $purple-lighter: hsl(262, 36%, 96%)
 $purple-light: hsl(264, 33%, 88%)
 $purple-somewhat-light: hsl(264, 17%, 71%)
@@ -20,6 +19,8 @@ $family-sans-serif: "Rubik", sans-serif
 $primary: $purple
 
 $body-background-color: $purple
+$footer-background-color: $purple
+$footer-color: $purple-lighter
 $link: $purple
 $link-hover: $purple-dark
 
@@ -29,14 +30,17 @@ $section-padding: $sections-horizontal-padding 1.5rem
 
 $box-background-color: $purple-light
 
-@import "bulma/sass/utilities/_all"
-@import "bulma/sass/base/_all"
+@import "bulma/sass/utilities/all"
+@import "bulma/sass/base/all"
+@import "bulma/sass/grid/all"
 @import "bulma/sass/elements/box"
 @import "bulma/sass/elements/button"
 @import "bulma/sass/elements/container"
 @import "bulma/sass/elements/icon"
 @import "bulma/sass/elements/title"
+@import "bulma/sass/components/modal"
 @import "bulma/sass/layout/hero"
 @import "bulma/sass/layout/section"
+@import "bulma/sass/layout/footer"
 
 @import "generations-sorciers/all"
