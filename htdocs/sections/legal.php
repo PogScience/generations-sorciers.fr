@@ -19,6 +19,9 @@
                             Schatten et Alexandre Arrivé pour PogScience, à l'occasion de l'événement éponyme.
                         </p>
                         <p>
+                            Le directeur de la publication est Théo Silvagno.
+                        </p>
+                        <p>
                             Le site est hébergé par Gandi.
                         </p>
                         <address>
@@ -28,19 +31,17 @@
                             France<br />
                             Tel : +33170377661
                         </address>
-                        <p>
-                            Directeur de la publication : Théo Silvagno.
-                        </p>
 
                         <h3>Cookies et données personnelles</h3>
                         <p>
-                            Nous déposons un cookie de mesure d'audience via Matomo, une solution open-source. Matomo
-                            est configuré de façon à ne pas stocker de données personnelles, dans le strict respect
-                            du RGPD.
+                            Nous utilisons Matomo, une solution open-source de mesure d'audience. Matomo est configuré
+                            de façon à ne pas stocker de données personnelles, telle que votre adresse IP, et à ne pas
+                            déposer de cookies.
                         </p>
                         <p>
                             Ce site inclue des contenus tiers provenant de Twitter, Inc. et Discord, Inc., qui peuvent
-                            déposer des cookies. Ces contenus sont intégrés en demandant la désactivation du suivi.
+                            déposer des cookies. Ces contenus sont intégrés en demandant la désactivation du suivi et
+                            des cookies.
                         </p>
                     </article>
                 </div>
