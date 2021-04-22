@@ -16,9 +16,9 @@
     <title>Générations Sorciers, un événement PogScience</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="preconnect" href="https://generationssorciers.matomo.cloud"/>
+    <link rel="preconnect" href="https://syndication.twitter.com"/>
 
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Rubik:ital,wght@0,400;0,500;1,400;1,500&display=swap"/>
     <link rel="stylesheet" href="assets/generations-sorciers.min.css"/>
 
     <!-- Primary Meta Tags -->

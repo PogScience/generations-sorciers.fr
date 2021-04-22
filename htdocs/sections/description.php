@@ -4,9 +4,16 @@
         <div class="container">
             <div class="columns gs-columns">
                 <div class="column is-5 gs-logo-dates">
-                    <figure class="gs-logo">
-                        <img src="assets/logo.png" alt="Générations Sorciers"/>
-                    </figure>
+                    <picture class="gs-logo">
+                        <img sizes="(max-width: 1200px) 100vw, 1200px"
+                             srcset="assets/logo-340.png 340w,
+                                     assets/logo-942.png 942w,
+                                     assets/logo-1200.png 1200w"
+                             src="assets/logo-1200.png"
+                             alt="PogScience présente : Générations Sorciers"
+                             aria-hidden="true" />
+                    </picture>
+
                     <aside class="gs-dates">
                         <time datetime="2021-04-26">
                             <span>26</span>
