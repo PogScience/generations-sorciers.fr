@@ -1,17 +1,31 @@
 .gs-events
   h1
+    position: sticky
+    top: 1rem
+
     font-size: 2.1rem
     font-family: Poppins, sans-serif
     color: $purple-lighter
     text-align: right
 
-    +mobile
-      text-align: center
-      margin-bottom: $sections-horizontal-padding
-
     span
       display: block
       font-size: 3.2rem
+
+    +touch
+      position: static
+      text-align: center
+      margin-bottom: $sections-horizontal-padding
+
+    +desktop-only
+      font-size: 1.5rem
+      span
+        font-size: 2.1rem
+
+    +widescreen-only
+      font-size: 1.8rem
+      span
+        font-size: 2.6rem
 
   .is-events-list
     margin-top: 1rem

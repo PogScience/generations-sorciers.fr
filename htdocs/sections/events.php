@@ -22,8 +22,8 @@ $fmt = new IntlDateFormatter(
 ?>
 
 <section class="section container gs-events" id="programme">
-    <div class="columns is-variable is-8">
-        <div class="column is-3">
+    <div class="columns is-desktop is-variable is-8">
+        <div class="column is-3 is-12-touch">
             <h1><span>Demandez</span> le programme</h1>
         </div>
         <div class="column is-events-list">

@@ -11,7 +11,7 @@
   date: 2021-04-21 02:00:00
   duration: 2 hours
 
-- title: Bidouiller, c'est pas sorcier !
+- title: Bidouiller, c'est pas sorcier !
   streamer: ioodyme
   link: ioodyme
   with: Avec Qu'est-ce que tu GEEKes
@@ -26,7 +26,7 @@
   date: 2021-04-21 08:00:00
   duration: 6 days
 
-- title: De la maquette au numérique, il n’y a rien de sorcier !
+- title: De la maquette au numérique, il n’y a rien de sorcier !
   streamer: ioodyme
   link: ioodyme
   with: Avec Qu'est-ce que tu GEEKes
@@ -36,7 +36,7 @@
   date: 2021-04-27 17:30:00
   duration: 2 hours
 
-- title: Vulgariser a des vertus insoupçonnées !
+- title: Vulgariser a des vertus insoupçonnées !
   subtitle: Table ronde
   streamer: Julien Dassa-Terrier
   link: dassa_ju
@@ -44,7 +44,20 @@
     Avec [Elodie Chabrol](https://www.elodiechabrol.com), [Hycarius](http://hycarius.fr/), [Amaury Carrade](https://zestedesavoir.com),
     [Mathilde de _Bien dans ma Thèse_](https://www.biendansmathese.com/), et Sabine Quindou
   description: |
-    Comment vulgariser peut être une démarche positive, utile et valorisante ?
+    Cette table ronde vise à aborder le rôle positif de la vulgarisation mais il y a un _twist_ ! On parlera des vertus
+    de la vulgarisation **pour les gens pratiquant cette activité**, et non pour leur audience.
+
+    Car oui, vulgariser nous a accompagnés dans les bons moments comme les mauvais, il a pu s’agir d’une porte vers une
+    nouvelle manière de voir nos études ou nos passions, une manière de sortir de l’isolation en partageant, parfois même
+    un tout nouveau plan de carrière pour construire une nouvelle vie. Nous partagerons nos expériences et celles de nos
+    connaissances !
+
+    Avec :
+    - [Elodie Chabrol](https://www.elodiechabrol.com), directrice internationale de Pint of Science ;
+    - [Hycarius](http://hycarius.fr/), de la chaîne _Histoire Appliquée_ ;
+    - [Amaury Carrade](https://zestedesavoir.com), de l'association Zeste de Savoir ;
+    - [Mathilde](https://www.biendansmathese.com/), de _Bien dans ma Thèse_ ; et
+    - Sabine Quindou, de _C'est pas Sorcier_.
   date: 2021-04-27 20:00:00
   duration: 2 hours 30 minutes
 
