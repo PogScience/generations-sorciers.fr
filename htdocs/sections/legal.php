@@ -32,7 +32,7 @@
                             Directeur de la publication : Théo Silvagno.
                         </p>
 
-                        <h3>Cookies</h3>
+                        <h3>Cookies et données personnelles</h3>
                         <p>
                             Nous déposons un cookie de mesure d'audience via Matomo, une solution open-source. Matomo
                             est configuré de façon à ne pas stocker de données personnelles, dans le strict respect
