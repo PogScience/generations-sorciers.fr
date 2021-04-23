@@ -20,10 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* *** Automatic timezone *** */
 
+    /**
+     * Automatic timezone is simple to use: time elements (with the real datetime in its
+     * attribute, as required by the HTML standard) and with the `has-auto-timezone` class
+     * will be updated to use the browser's timezone.
+     *
+     * If the date is different, a span.real-day element will be appended to the time element,
+     * containing the date in the user's timezone. Or prepended, if the class `has-real-day-prepended`
+     * is added to the time element.
+     *
+     * Finally, with the `is-date` class, instead of the hour, the day will be displayed.
+     */
+
     const localTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone
     const dateFormat = new Intl.DateTimeFormat('fr', {
         timeZone: localTimezone,
         weekday: "long",
+        day: "numeric",
+        month: "long",
+    })
+    const shortDateFormat = new Intl.DateTimeFormat('fr', {
+        timeZone: localTimezone,
         day: "numeric",
         month: "long",
     })
@@ -61,6 +78,30 @@ document.addEventListener("DOMContentLoaded", () => {
             })
 
             timeElement.innerText = `${hours}h${minutes !== "00" ? minutes : ""}`
+
+            // Display the date if it is different
+            const dateParts = dateFormat.formatToParts(date)
+            const origDateParts = originalDateTimeFormat.formatToParts(date)
+            let day, origDay
+            dateParts.forEach(part => {
+                if (part.type === "day") day = part.value
+            })
+            origDateParts.forEach(part => {
+                if (part.type === "day") origDay = part.value
+            })
+
+            if (day !== origDay) {
+                const realDayElement = document.createElement("span")
+                realDayElement.classList.add("real-day")
+                realDayElement.innerText = shortDateFormat.format(date)
+
+                if (timeElement.classList.contains("has-real-day-prepended")) {
+                    realDayElement.innerText += " "
+                    timeElement.prepend(realDayElement)
+                } else {
+                    timeElement.appendChild(realDayElement)
+                }
+            }
         }
     })
 
