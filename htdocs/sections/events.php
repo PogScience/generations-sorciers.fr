@@ -19,16 +19,27 @@ $fmt = new IntlDateFormatter(
     IntlDateFormatter::GREGORIAN,
     'EEEE d MMMM'
 );
+
+$tz = new DateTimeZone('Europe/Paris');
 ?>
 
 <section class="section container gs-events" id="programme">
     <div class="columns is-desktop is-variable is-8">
         <div class="column is-3 is-12-touch">
-            <h1><span>Demandez</span> le programme</h1>
+            <div class="column-title-sticker">
+                <h1><span>Demandez</span> le programme</h1>
+                <aside class="current-timezone">
+                    Heure de <span id="timezone">Paris</span>
+                </aside>
+            </div>
         </div>
+
         <div class="column is-events-list">
             <?php foreach ($events->events as $day => $day_events): ?>
-                <h2><?php echo ucfirst($fmt->format(DateTime::createFromFormat('Y-m-d', $day))) ?></h2>
+                <?php $day_date = DateTime::createFromFormat('Y-m-d', $day, $tz)->setTime(23, 0) ?>
+                <h2>
+                    <time datetime="<?php echo $day_date->format(DATE_ISO8601) ?>" class="has-auto-timezone is-date"><?php echo ucfirst($fmt->format($day_date)) ?></time>
+                </h2>
 
                 <?php /** @var \PogScience\Event $event */
                 foreach ($day_events as $event): ?>
@@ -36,7 +47,7 @@ $fmt = new IntlDateFormatter(
                     <article class="box<?php if ($event->final) echo ' is-final' ?><?php if ($event->past()) echo ' is-past' ?>">
                         <details>
                             <summary>
-                                <time datetime="<?php echo $event->dateISO() ?>">
+                                <time datetime="<?php echo $event->dateISO() ?>" class="has-auto-timezone">
                                     <?php echo $event->hour() ?>
                                 </time>
 
@@ -62,7 +73,7 @@ $fmt = new IntlDateFormatter(
                                 </div>
 
                                 <aside>
-                                    <time datetime="<?php echo $event->dateISO() ?>" class="is-mobile-time" aria-hidden="true"><?php echo $event->hour() ?></time>
+                                    <time datetime="<?php echo $event->dateISO() ?>" class="is-mobile-time has-auto-timezone" aria-hidden="true"><?php echo $event->hour() ?></time>
 
                                     <a href="<?php echo $event->link ?>" class="button is-primary is-large" title="Aller sur la chaîne sur Twitch de <?php echo strip_tags($event->streamer) ?>">
                                       <span class="icon is-large">

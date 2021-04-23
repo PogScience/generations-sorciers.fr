@@ -50,14 +50,3 @@
         </div>
     </details>
 </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll("details.has-modal").forEach(modal => {
-            const closers = modal.querySelectorAll(".modal-background, .modal-close")
-            closers.forEach(closer => closer.addEventListener("click", () => {
-                modal.removeAttribute("open")
-            }))
-        })
-    })
-</script>

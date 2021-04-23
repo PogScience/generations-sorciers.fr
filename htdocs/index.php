@@ -56,6 +56,8 @@
     include "sections/legal.php";
 ?>
 
+<script src="assets/generations-sorciers.js" async></script>
+
 <!-- Matomo -->
 <script type="text/javascript">
     var _paq = window._paq = window._paq || [];

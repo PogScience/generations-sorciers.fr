@@ -1,31 +1,40 @@
 .gs-events
-  h1
+  .column-title-sticker
     position: sticky
     top: 1rem
 
-    font-size: 2.1rem
-    font-family: Poppins, sans-serif
-    color: $purple-lighter
-    text-align: right
+    margin: 0
+    padding: 0
 
-    span
-      display: block
-      font-size: 3.2rem
+    text-align: right
+    color: $purple-lighter
 
     +touch
       position: static
       text-align: center
       margin-bottom: $sections-horizontal-padding
 
-    +desktop-only
-      font-size: 1.5rem
-      span
-        font-size: 2.1rem
+    h1
+      font-size: 2.1rem
+      font-family: Poppins, sans-serif
 
-    +widescreen-only
-      font-size: 1.8rem
       span
-        font-size: 2.6rem
+        display: block
+        font-size: 3.2rem
+
+      +desktop-only
+        font-size: 1.5rem
+        span
+          font-size: 2.1rem
+
+      +widescreen-only
+        font-size: 1.8rem
+        span
+          font-size: 2.6rem
+
+    .current-timezone
+      margin-top: 1rem
+      font-size: 1.1em
 
   .is-events-list
     margin-top: 1rem
