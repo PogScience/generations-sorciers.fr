@@ -21,7 +21,30 @@
 - title: De la maquette au numérique, il n’y a rien de sorcier !
   streamer: ioodyme
   link: ioodyme
-  with: Avec [Qu'est-ce que Tu GEEKes](https://www.twitch.tv/qtgeekes) et Emmanuel Pernoud
+  with: Avec [Qu'est-ce que Tu GEEKes](https://www.twitch.tv/qtgeekes) et Emmanuel Pernoud (jusqu'à 19h30)
+  description: |
+    _Diffusé sur les deux chaînes Twitch en simultané_
+
+    Émission en trois parties dont l’objectif est de faire le parallèle entre les maquettes de CPS et ce qu’on utilise
+    aujourd’hui dans nos émissions sur Twitch ou Youtube.
+
+    Une partie conditionnée par la présence de membres de C’est Pas Sorcier où l’on parle des maquettes (comment elles
+    étaient faites, pourquoi ça a été fait comme ça, est-ce que ça a été remis en question avec l’évolution des technos
+    après 2010, etc.)
+
+    Une partie où l’on présente des maquettes qu’on utilise maintenant pour apprendre ce qu’est une IA (L’intelligence
+    artificielle en carton !) ou encore une maquette humaine qu’on utilise pour expliquer le crash du premier vol
+    d’Ariane 5 d’un point de vue informatique.
+
+    Une partie où on explore ce qu’on peut faire avec les nouveaux outils numériques (Impression 3D, Raspberry Pi,
+    Objets connectés, etc.).
+  date: 2021-04-27 17:30:00
+  duration: 5 hours 30 minutes
+
+- title: De la maquette au numérique, il n’y a rien de sorcier !
+  streamer: Qu'est-ce que Tu GEEKes
+  link: qtgeekes
+  with: Avec [ioodyme](https://www.twitch.tv/ioodyme) et Emmanuel Pernoud
   description: |
     _Diffusé sur les deux chaînes Twitch en simultané_
 

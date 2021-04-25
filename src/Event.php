@@ -14,6 +14,7 @@ class Event
     public string $subtitle;
     public string $streamer;
     public string $link;
+    public string $icon;
     public string $with;
     public string $description;
     public DateTimeInterface $date;
@@ -36,15 +37,25 @@ class Event
         // timezone change (and ISO date in <time> tags is correct).
         $this->date = new DateTimeImmutable($raw_event['date']->format('Y-m-d H:i:s'), new DateTimeZone('Europe/Paris'));
         $this->duration = DateInterval::createFromDateString($raw_event['duration']);
+
         $this->final = $raw_event['final'] ?? false;
         $this->hidden = $raw_event['hidden'] ?? false;
+
+        // The icon is either the `icon` field, or the `link` without `https://twitch.tv/` and with `.png`
+        // If the `icon` field is `false`, then, no icon at all.
+        if (!isset($raw_event['icon']) || $raw_event['icon'] !== false) {
+            $this->icon = '/assets/streamers/' . ($raw_event['icon'] ?? str_replace('https://twitch.tv/', '', $this->link) . '.png');
+        }
+        else {
+            $this->icon = "";
+        }
     }
 
     /**
      * @return string The event's hour in short readable format (either like “20h” or “18h30” if non-zero minutes).
      */
     public function hour() : string {
-        return $this->date->format('H') . 'h' . ($this->date->format('i') !== '00' ? $this->date->format('i') : '');
+        return $this->format_time($this->date);
     }
 
     /**
@@ -52,6 +63,13 @@ class Event
      */
     public function dateISO() : string {
         return $this->date->format(DATE_ISO8601);
+    }
+
+    /**
+     * @return string The date in ISO format
+     */
+    public function endDateISO() : string {
+        return $this->date->add($this->duration)->format(DATE_ISO8601);
     }
 
     /**
@@ -67,5 +85,16 @@ class Event
      */
     public function past() : bool {
         return new DateTime() > $this->date->add($this->duration);
+    }
+
+    public function hour_end() : string {
+        return $this->format_time($this->date->add($this->duration));
+    }
+
+    /**
+     * @return string The event's ending hour in short readable format (either like “20h” or “18h30” if non-zero minutes).
+     */
+    private function format_time(DateTimeInterface $date) : string {
+        return $date->format('H') . 'h' . ($date->format('i') !== '00' ? $date->format('i') : '');
     }
 }

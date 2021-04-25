@@ -58,7 +58,7 @@
           font-family: Poppins, sans-serif
 
       &.is-final
-        &, summary .is-event-description p.subtitle
+        &, summary > .is-event-description h3 a, summary > .is-event-description p.subtitle
           &, strong, em
             background-color: $purple-darker
             color: $purple-lighter
@@ -117,6 +117,12 @@
               font-size: 1.8rem
               font-weight: 500
               font-family: Poppins, sans-serif
+
+              a
+                color: $darker
+
+                &:hover
+                  text-decoration: underline
 
               +mobile
                 font-size: 1.6rem
@@ -181,6 +187,11 @@
                 .icon.is-large
                   width: 1.4rem
                   height: 1.4rem
+
+            .streamer-icon img
+              width: 60px
+              height: 60px
+              border-radius: 4px
 
             .icon.is-caret
               margin-left: 1rem

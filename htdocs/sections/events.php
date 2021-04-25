@@ -60,7 +60,7 @@ $tz = new DateTimeZone('Europe/Paris');
                                     <h3>
                                         <?php if ($event->live()): ?><a href="<?php echo $event->link ?>" class="live" title="<?php echo strip_tags($event->streamer) ?> est actuellement en direct ! Cliquez pour accéder au live">LIVE</a><?php endif; ?>
                                         <?php if ($event->hidden): ?>[NON PUBLIÉ]<?php endif; ?>
-                                        <?php echo $event->title ?>
+                                        <a href="<?php echo $event->link ?>"><?php echo $event->title ?></a>
                                     </h3>
 
                                     <?php if ($event->subtitle): ?>
@@ -84,25 +84,32 @@ $tz = new DateTimeZone('Europe/Paris');
                                 <aside>
                                     <time datetime="<?php echo $event->dateISO() ?>" class="is-mobile-time has-auto-timezone has-real-day-prepended" aria-hidden="true"><?php echo $event->hour() ?></time>
 
-                                    <a href="<?php echo $event->link ?>" class="button is-primary is-large" title="Aller sur la chaîne sur Twitch de <?php echo strip_tags($event->streamer) ?>">
-                                      <span class="icon is-large">
-                                        <?php twitch(); ?>
-                                        </span>
+                                    <a href="<?php echo $event->link ?>" class="<?php if (!$event->icon): ?>button is-primary is-large<?php endif; ?>" title="Aller sur la chaîne sur Twitch de <?php echo strip_tags($event->streamer) ?>">
+                                        <?php if ($event->icon): ?>
+                                            <span class="streamer-icon">
+                                                <img src="<?php echo $event->icon ?>" alt="<?php echo strip_tags($event->streamer) ?>" />
+                                            </span>
+                                        <?php else: ?>
+                                            <span class="icon is-large">
+                                            <?php twitch(); ?>
+                                            </span>
+                                        <?php endif; ?>
                                     </a>
 
-                                    <?php if ($event->description): ?>
                                     <span class="icon is-caret">
                                         <?php caret(); ?>
                                     </span>
-                                    <?php endif; ?>
                                 </aside>
                             </summary>
 
-                            <?php if ($event->description): ?>
-                                <div class="content">
-                                    <?php echo $event->description ?>
-                                </div>
-                            <?php endif; ?>
+                            <div class="content">
+                                <?php echo $event->description ?>
+                                <p class="meta">
+                                    De <time datetime="<?php echo $event->dateISO() ?>" class="has-auto-timezone has-real-day-prepended"><?php echo $event->hour() ?></time>
+                                    à <time datetime="<?php echo $event->endDateISO() ?>" class="has-auto-timezone has-real-day-prepended"><?php echo $event->hour_end() ?></time>
+                                    (<?php echo $event->duration->h > 1 ? $event->duration->h . ' heures' : 'une heure'; if ($event->duration->i > 0): echo $event->duration->format(' et %i minutes'); endif; ?>).
+                                </p>
+                            </div>
                         </details>
                     </article>
 
