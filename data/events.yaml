@@ -194,12 +194,12 @@
   duration: 2 hours 30 minutes
   hidden: true
 
-- title: C'est pas Sorcier de l'espace
+- title: C'est pas Sorcier de l'espace, spacial Ariane 5
   link: spaceexplorerw
   streamer: SpaceExplorerW
+  description: Soirée autour du _C'est Pas Sorcier_ sur l'Ariane 5
   date: 2021-04-30 20:00:00
   duration: 2 hours
-  hidden: true
 
 - title: L’Héritage Sorcier — Quelles ressources aujourd’hui ?
   link: toutsecomprend
@@ -239,7 +239,6 @@
     Analyse et décryptage d’un _C’est pas Sorcier_ traitant d’un thème historique.
   date: 2021-05-01 20:00:00
   duration: 3 hours
-  hidden: true
 
 - title: Quiz _C'est pas sorcier_
   link: castormother
