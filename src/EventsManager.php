@@ -12,7 +12,9 @@ class EventsManager
         $flat_events = [];
 
         foreach ($raw_events as $raw_event) {
-            $flat_events[] = new Event($raw_event);
+            $event = new Event($raw_event);
+            if ($event->hidden) continue;
+            $flat_events[] = $event;
         }
 
         // We sort events by date

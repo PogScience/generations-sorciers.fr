@@ -19,6 +19,7 @@ class Event
     public DateTimeInterface $date;
     public DateInterval $duration;
     public bool $final;
+    public bool $hidden;
 
     public function __construct(array $raw_event)
     {
@@ -36,6 +37,7 @@ class Event
         $this->date = new DateTimeImmutable($raw_event['date']->format('Y-m-d H:i:s'), new DateTimeZone('Europe/Paris'));
         $this->duration = DateInterval::createFromDateString($raw_event['duration']);
         $this->final = $raw_event['final'] ?? false;
+        $this->hidden = $raw_event['hidden'] ?? false;
     }
 
     /**
