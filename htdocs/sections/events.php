@@ -79,7 +79,7 @@ $tz = new DateTimeZone('Europe/Paris');
                                 <aside>
                                     <time datetime="<?php echo $event->dateISO() ?>" class="is-mobile-time has-auto-timezone has-real-day-prepended" aria-hidden="true"><?php echo $event->hour() ?></time>
 
-                                    <a href="<?php echo $event->link ?>" class="<?php if (!$event->icon): ?>button is-primary is-large<?php endif; ?>" title="Aller sur la chaîne sur Twitch de <?php echo strip_tags($event->streamer) ?>">
+                                    <a href="<?php echo $event->link ?>" class="<?php if (!$event->icon): ?>button is-primary is-large<?php endif; ?>" title="Aller sur la chaîne sur Twitch<?php if($event->streamer): ?> de <?php echo strip_tags($event->streamer) ?><?php endif; ?>">
                                         <?php if ($event->icon): ?>
                                             <span class="streamer-icon">
                                                 <img src="<?php echo $event->icon ?>" alt="<?php echo strip_tags($event->streamer) ?>" />
