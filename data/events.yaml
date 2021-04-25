@@ -1,58 +1,63 @@
-- title: La littérature comme _réconfort_
+- title: La littérature comme réconfort
   streamer: Professeur Klotho
   link: professeurklotho
-  with: Avec Sabine Quindou et Valérie Guerlain
+  with: Avec Valérie Guerlain
   description: |
-    Les livres ou textes **feel good**, avec commentaire de textes et/ou anecdotes.
+    Les bienfaits de la littérature et de la lecture, un moyen de réparer et rassurer ? Anecdotes de lectures.
+  date: 2021-04-28 20:00:00
+  duration: 1 hour 30 minutes
 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda
-    dignissimos eius enim eos exercitationem expedita facilis ipsum maiores minima
-    mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.
-  date: 2021-04-21 02:00:00
-  duration: 2 hours
-
-- title: Bidouiller, c'est pas sorcier !
+- title: Bricoler, c'est pas sorcier !
   streamer: ioodyme
   link: ioodyme
-  with: Avec Qu'est-ce que tu GEEKes
+  with:
   description: |
-    Analyse de la fabrication des maquettes et reproduction avec des outils modernes,
-    en collaboration avec Qu'est-ce que tu GEEKes
-
-    Y’a quoi dans un labo ? Visite d’un laboratoire de biologie moléculaire. Présentation
-    des appareils de mesures, cultures, etc.
-
-    Electronique,programmation, expérience scientifique à la maison, modélisation / impression 3D.
-  date: 2021-04-21 08:00:00
-  duration: 6 days
+    Réalisation de petites expériences scientifiques, non dangereuses et accessibles à la maison. Fabrication
+    d’un spectrophotomètre, gel d’électrophorèse, chromatographie sur couche mince, etc… En expliquant comment
+    le faire chez soi et le principe de fonctionnement.
+  date: 2021-05-02 18:00:00
+  duration: 5 hours
 
 - title: De la maquette au numérique, il n’y a rien de sorcier !
   streamer: ioodyme
   link: ioodyme
-  with: Avec Qu'est-ce que tu GEEKes
+  with: Avec [Qu'est-ce que Tu GEEKes](https://www.twitch.tv/qtgeekes) et Emmanuel Pernoud
   description: |
-    Parler des maquettes CPS, des maquettes qu’on utilise encore aujourd’hui et de l’apport de
-    l'électronique et du numérique.
+    _Diffusé sur les deux chaînes Twitch en simultané_
+
+    Émission en trois parties dont l’objectif est de faire le parallèle entre les maquettes de CPS et ce qu’on utilise
+    aujourd’hui dans nos émissions sur Twitch ou Youtube.
+
+    Une partie conditionnée par la présence de membres de C’est Pas Sorcier où l’on parle des maquettes (comment elles
+    étaient faites, pourquoi ça a été fait comme ça, est-ce que ça a été remis en question avec l’évolution des technos
+    après 2010, etc.)
+
+    Une partie où l’on présente des maquettes qu’on utilise maintenant pour apprendre ce qu’est une IA (L’intelligence
+    artificielle en carton !) ou encore une maquette humaine qu’on utilise pour expliquer le crash du premier vol
+    d’Ariane 5 d’un point de vue informatique.
+
+    Une partie où on explore ce qu’on peut faire avec les nouveaux outils numériques (Impression 3D, Raspberry Pi,
+    Objets connectés, etc.).
   date: 2021-04-27 17:30:00
   duration: 2 hours
 
 - title: Vulgariser a des vertus insoupçonnées !
   subtitle: Table ronde
   streamer: Julien Dassa-Terrier
-  link: dassa_ju
+  link: dassaju
   with: |
     Avec [Elodie Chabrol](https://www.elodiechabrol.com), [Hycarius](http://hycarius.fr/), [Amaury Carrade](https://zestedesavoir.com),
     [Mathilde de _Bien dans ma Thèse_](https://www.biendansmathese.com/), et Sabine Quindou
   description: |
-    Cette table ronde vise à aborder le rôle positif de la vulgarisation mais il y a un _twist_ ! On parlera des vertus
-    de la vulgarisation **pour les gens pratiquant cette activité**, et non pour leur audience.
+    Une table ronde entourée d'éminents invités qui vise à aborder le rôle positif de la vulgarisation, mais il y a un
+    _twist_ ! Avec Élodie (Pint of Science), Thibault (Histoire Appliquée), Mathilde (Bien dans ma Thèse), Amaury (Zeste
+    de Savoir) et Sabine de C'est pas Sorcier, on parlera des vertus de la vulgarisation non pas pour l'audience
+    mais bien pour les vulgarisateurs et vulgarisatrices.
 
-    Car oui, vulgariser nous a accompagnés dans les bons moments comme les mauvais, il a pu s’agir d’une porte vers une
-    nouvelle manière de voir nos études ou nos passions, une manière de sortir de l’isolation en partageant, parfois même
-    un tout nouveau plan de carrière pour construire une nouvelle vie. Nous partagerons nos expériences et celles de nos
-    connaissances !
+    Car oui, vulgariser nous a accompagnés dans les bons moments comme les mauvais ! Une porte pour nous réapproprier
+    nos études, nos compétences, sortir de l'isolation et parfois même devenir un véritable plan de carrière !
 
-    Avec :
+    Invités :
     - [Elodie Chabrol](https://www.elodiechabrol.com), directrice internationale de Pint of Science ;
     - [Hycarius](http://hycarius.fr/), de la chaîne _Histoire Appliquée_ ;
     - [Amaury Carrade](https://zestedesavoir.com), de l'association Zeste de Savoir ;
@@ -61,25 +66,147 @@
   date: 2021-04-27 20:00:00
   duration: 2 hours 30 minutes
 
+- title: Jeu vidéo _C'est pas Sorcier_
+  link: corentin_buti
+  streamer: Corentin Buti
+  description: Une aventure dans les années 2000 avec une découverte des jeux _C'est pas Sorcier_ !
+  date: 2021-04-26 20:00:00
+  duration: 3 hours 00 minutes
+
+- title: Apprendre ou jouer, faut-il choisir ?
+  link: kromette
+  streamer: Kromette
+  description: |
+    Live discussion sur l'apprentissage par les jeux, nous allons regarder quels sont les avantages et inconvénients
+    de la "gamification" et regarder comment elle peut être mise en place dans différents domaines. Puis nous choisirons
+    tous ensemble un projet de mini-jeu d'apprentissage à réaliser pendant la semaine de live.
+  date: 2021-04-27 17:30:00
+  duration: 2 hours
+
+- title: Réalisation du projet “mini-jeu” (jour 1)
+  link: kromette
+  streamer: Kromette
+  description: Développement / réalisation du mini-jeu décidé le 26 avril
+  date: 2021-04-28 09:30:00
+  duration: 2 hours 30 minutes
+
+- title: Réalisation du projet “mini-jeu” (jour 2)
+  link: kromette
+  streamer: Kromette
+  description: Développement / réalisation du mini-jeu décidé le 26 avril
+  date: 2021-04-29 09:30:00
+  duration: 2 hours 30 minutes
+
+- title: Réalisation du projet “mini-jeu” (jour 3)
+  link: kromette
+  streamer: Kromette
+  description: Développement / réalisation du mini-jeu décidé le 26 avril
+  date: 2021-04-30 09:30:00
+  duration: 2 hours 30 minutes
+
+- title: Réalisation du projet “mini-jeu” (jour 4)
+  link: kromette
+  streamer: Kromette
+  description: Développement / réalisation du mini-jeu décidé le 26 avril
+  date: 2021-05-01 14:00:00
+  duration: 4 hours
+
+- title: Bien dans mes études
+  link: biendansmathese
+  streamer: Mathilde de _Bien dans ma These_
+  with: Avec Indesciences et le _Science Comedy Show_
+  description: |
+    Live en deux parties !
+
+    - Première partie : en présence du _Science Comedy Show_ avec un jeux géant _Qui est-ce_ version
+      Vulgarisateurs/Vulgarisatrices.
+    - Deuxième partie avec l’équipe d’_Indésciences_ pour parler du réseau d'association scientifiques nationale et de
+    l’importance de faire de la vulgarisation scientifique pendant ses études.
+  date: 2021-04-29 18:00:00
+  duration: 4 hours
+  hidden: true
+
+- title: Développer sa créativité pour libérer son esprit
+  link: emilimagine
+  streamer: Emilimagine
+  description: |
+    Live discussion sur les bienfaits de l'art. Petites astuces réalisation/budget/apprentissage/recyclage… suivi de démonstrations artisanales.
+  date: 2021-04-29 15:00:00
+  duration: 3 hours
+
+- title: Sorcellerie d’hier et d’aujourd’hui
+  link: qtgeekes
+  streamer: Qu'est-ce que Tu GEEKes
+  with: Avec Isabelle Hostalery
+  description: |
+    Évolution des techniques de tournage et de montage de _C'est Pas Sorcier_.
+  date: 2021-04-29 20:30:00
+  duration: 2 hours
+
+- title: Le concert sorcier
+  link: legonfleurdhelice
+  streamer: Le Gonfleur d'Hélice
+  with: Avec Kevin Chomat (autres à venir)
+  description: |
+    Concert virtuel par de jeunes artistes, pour passer un bon moment, suivi d'une discussion autour de la place de la
+    musique dans leur crise sanitaire.
+  date: 2021-04-30 21:00:00
+  duration: 2 hours 30 minutes
+  hidden: true
+
+- title: L’Héritage Sorcier — Quelles ressources aujourd’hui ?
+  link: toutsecomprend
+  streamer: Robin Isnard de _Tout se Comprend_
+  with: Avec Pascal Léonard (réalisateur de _C'est pas Sorcier_)
+  description: |
+    Discussion avec Pascal Léonard, réalisateur de _C'est pas Sorcier_ et co-fondateur de l'Esprit Sorcier, autour de la vulgarisation
+    internet héritée de l'émission.
+  date: 2021-05-01 09:00:00
+  duration: 3 hours
+
+- title: Y'a quoi dans un labo ?
+  link: ioodyme
+  streamer: ioodyme
+  description: |
+    Visite d’un laboratoire de biologie moléculaire (présentation des appareils de mesures, cultures, etc.) et visite
+    de la maison de la science de Liège.
+  date: 2021-05-01 12:00:00
+  duration: 10 hours
+
+- title: S'intéresser à l'art, une perte de temps ?
+  link: lewaso_
+  streamer: Le Waso
+  with: Avec Valérie Guerlain (la petite voix)
+  description: |
+    Prendre confiance en soi, en ses capacités et mieux s'affirmer. Présentation du parcours de Valérie, présentation de
+    l'industrie de l'art, présentation du parcours d'artistes autodidactes ou reconvertis et enfin… par où je commence
+    si je veux me plonger dedans ?
+  date: 2021-05-01 18:00:00
+  duration: 1 hour 30 minutes
+
+- title: React _C’est pas sorcier_ historique
+  link: rivenzi
+  streamer: Rivenzi
+  with: Avec Valérie Guerlain (la petite voix)
+  description: |
+    Analyse et décryptage d’un _C’est pas Sorcier_ traitant d’un thème historique.
+  date: 2021-05-01 20:00:00
+  duration: 3 hours
+  hidden: true
+
+- title: Quizz
+  link: castormother
+  streamer: CastorMother
+  with: Avec Sabine Quindou, Lorraine Subra Moreau (réalisatrice) et Guillaume Jupin (journaliste)
+  date: 2021-04-28 18:00:00
+  duration: 2 hours
+  hidden: true
+
 - title: Sorciers Solidaires
   subtitle: La libre-antenne de clôture avec tout le monde !
   link: collectifconscience
-  with: Avec Jamy Gourmaud, Fred Courant, Sabine Quindou, Valérie Guerlain (la petite voix), … [j'ai oublié les autres honte sur moi]
-  description: |
-    Beaucoup de choses au programme !
-
-    ### Première partie
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda dignissimos eius enim eos exercitationem expedita facilis
-    ipsum maiores minima mollitia pariatur perferendis quaerat, quos rerum sed sequi ullam voluptatibus.
-
-    ### Seconde partie
-
-    Alors là c'est plus compliqué.
-
-    - Parce que voilà.
-    - C'est dur la vie.
-    - Et sinon vous [ça va ?](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+  with: Avec **toute l'équipe *C'est pas Sorcier*** ! Jamy Gourmaud, Fred Courant, Sabine Quindou, Valérie Guerlain (la petite voix), …
+  description:
   date: 2021-05-03 20:00:00
   duration: 3 hours
   final: true
