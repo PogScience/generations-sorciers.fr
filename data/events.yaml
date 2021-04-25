@@ -66,6 +66,24 @@
   date: 2021-04-27 20:00:00
   duration: 2 hours 30 minutes
 
+- title: Café Croiscience — Spécial Generations Sorciers
+  streamer: Julien Dassa-Terrier
+  link: dassaju
+  description: |
+    La matinale d'actualité scientifique se met aux couleurs de _Générations Sorciers_ ! On cherche une actu en lien
+    avec un épisodes de CPS !
+  date: 2021-04-27 08:00:00
+  duration: 2 hours
+
+- title: Café Croiscience — Spécial Generations Sorciers
+  streamer: Julien Dassa-Terrier
+  link: dassaju
+  description: |
+    La matinale d'actualité scientifique se met aux couleurs de _Générations Sorciers_ ! On cherche une actu en lien
+    avec un épisodes de CPS !
+  date: 2021-04-30 08:00:00
+  duration: 2 hours
+
 - title: Jeu vidéo _C'est pas Sorcier_
   link: corentin_buti
   streamer: Corentin Buti
@@ -152,6 +170,13 @@
     musique dans leur crise sanitaire.
   date: 2021-04-30 21:00:00
   duration: 2 hours 30 minutes
+  hidden: true
+
+- title: C'est pas Sorcier de l'espace
+  link: spaceexplorerw
+  streamer: SpaceExplorerW
+  date: 2021-04-30 20:00:00
+  duration: 2 hours
   hidden: true
 
 - title: L’Héritage Sorcier — Quelles ressources aujourd’hui ?
