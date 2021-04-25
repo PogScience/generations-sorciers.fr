@@ -163,9 +163,8 @@
       Vulgarisateurs/Vulgarisatrices.
     - Deuxième partie avec l’équipe d’_Indésciences_ pour parler du réseau d'association scientifiques nationale et de
     l’importance de faire de la vulgarisation scientifique pendant ses études.
-  date: 2021-04-29 18:00:00
+  date: 2021-04-29 19:00:00
   duration: 4 hours
-  hidden: true
 
 - title: Développer sa créativité pour libérer son esprit
   link: emilimagine
@@ -242,13 +241,12 @@
   duration: 3 hours
   hidden: true
 
-- title: Quizz
+- title: Quiz _C'est pas sorcier_
   link: castormother
   streamer: CastorMother
-  with: Avec Sabine Quindou, Lorraine Subra Moreau (réalisatrice) et Guillaume Jupin (journaliste)
+  with: Avec Sabine Quindou, Lorraine Subra Moreau (réalisatrice) et possiblement Guillaume Jupin (journaliste)
   date: 2021-04-28 18:00:00
   duration: 2 hours
-  hidden: true
 
 - title: Sorciers Solidaires
   subtitle: La libre-antenne de clôture avec tout le monde !
