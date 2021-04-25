@@ -29,7 +29,10 @@ $tz = new DateTimeZone('Europe/Paris');
             <div class="column-title-sticker">
                 <h1><span>Demandez</span> le programme</h1>
                 <aside class="current-timezone">
-                    Heure de <span id="timezone">Paris</span>
+                    <p>Heure de <span id="timezone">Paris</span></p>
+                </aside>
+                <aside>
+                    <p>D'autres événements s'ajouteront…</p>
                 </aside>
             </div>
         </div>
