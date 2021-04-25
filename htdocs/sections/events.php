@@ -31,9 +31,11 @@ $tz = new DateTimeZone('Europe/Paris');
                 <aside class="current-timezone">
                     <p>Heure de <span id="timezone">Paris</span></p>
                 </aside>
+                <?php if ($events->has_hidden_events): ?>
                 <aside>
                     <p>D'autres événements s'ajouteront…</p>
                 </aside>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -55,7 +57,11 @@ $tz = new DateTimeZone('Europe/Paris');
                                 </time>
 
                                 <div class="is-event-description">
-                                    <h3><?php if ($event->live()): ?><a href="<?php echo $event->link ?>" class="live" title="<?php echo strip_tags($event->streamer) ?> est actuellement en direct ! Cliquez pour accéder au live">LIVE</a> <?php endif; echo $event->title ?></h3>
+                                    <h3>
+                                        <?php if ($event->live()): ?><a href="<?php echo $event->link ?>" class="live" title="<?php echo strip_tags($event->streamer) ?> est actuellement en direct ! Cliquez pour accéder au live">LIVE</a><?php endif; ?>
+                                        <?php if ($event->hidden): ?>[NON PUBLIÉ]<?php endif; ?>
+                                        <?php echo $event->title ?>
+                                    </h3>
 
                                     <?php if ($event->subtitle): ?>
                                     <p class="subtitle"><?php echo $event->subtitle ?></p>

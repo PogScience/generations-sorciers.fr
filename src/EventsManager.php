@@ -6,6 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 class EventsManager
 {
     public array $events = [];
+    public bool $has_hidden_events = false;
 
     public function load() {
         $raw_events = Yaml::parseFile("../data/events.yaml", Yaml::PARSE_DATETIME);
@@ -13,7 +14,15 @@ class EventsManager
 
         foreach ($raw_events as $raw_event) {
             $event = new Event($raw_event);
-            if ($event->hidden) continue;
+
+            if ($event->hidden) {
+                $this->has_hidden_events = true;
+
+                if (!defined('GS_PREVIEW')) {
+                    continue;
+                }
+            }
+
             $flat_events[] = $event;
         }
 

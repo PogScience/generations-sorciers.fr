@@ -1,4 +1,8 @@
 <?php
+    if (isset($_GET['preview']) && $_GET['preview'] === '997d097f') {
+        define('GS_PREVIEW', 'true');
+    }
+
     require_once '../vendor/autoload.php';
 ?>
 <!DOCTYPE html>
