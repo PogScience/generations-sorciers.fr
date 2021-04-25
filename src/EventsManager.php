@@ -6,6 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 class EventsManager
 {
     public array $events = [];
+    public int $events_count = 0;
     public bool $has_hidden_events = false;
 
     public function load() {
@@ -34,6 +35,8 @@ class EventsManager
 
             return $a->date < $b->date ? -1 : 1;
         });
+
+        $this->events_count = count($flat_events);
 
         // Then group events by day
         foreach ($flat_events as $event) {

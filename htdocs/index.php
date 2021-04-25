@@ -1,9 +1,14 @@
 <?php
-    if (isset($_GET['preview']) && $_GET['preview'] === '997d097f') {
-        define('GS_PREVIEW', 'true');
-    }
+use PogScience\EventsManager;
 
-    require_once '../vendor/autoload.php';
+if (isset($_GET['preview']) && $_GET['preview'] === '997d097f') {
+    define('GS_PREVIEW', 'true');
+}
+
+require_once '../vendor/autoload.php';
+
+$events = new EventsManager();
+$events->load();
 ?>
 <!DOCTYPE html>
 <html lang="fr">

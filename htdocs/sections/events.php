@@ -1,15 +1,10 @@
 <?php
-use PogScience\EventsManager;
-
 function twitch() {
     include "../svg/twitch.svg";
 }
 function caret() {
   include "../svg/caret.svg";
 }
-
-$events = new EventsManager();
-$events->load();
 
 $fmt = new IntlDateFormatter(
     'fr_FR',

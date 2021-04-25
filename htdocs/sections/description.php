@@ -38,7 +38,7 @@
                         <a href="https://www.filsantejeunes.com/" target="_blank">Fil Santé Jeunes</a> !
                     </p>
                     <p>
-                        Huit jours, une vingtaine de streams, autant de streamers, et bien sûr
+                        Neuf jours, <strong><?php echo $events->events_count ?> streams</strong>, plein de streamers, et bien sûr
                         <strong>des sorciers</strong> ! L'équipe de l'émission sera à l'honneur tout
                         au long de l'événement.
                     </p>
