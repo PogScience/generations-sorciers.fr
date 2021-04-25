@@ -44,18 +44,12 @@
                     </p>
 
                     <p class="buttons">
-                        <?php if(defined("GS_PREVIEW")): ?>
                         <a href="#programme" class="button is-primary is-large">
                             Consulter le programme
                         </a>
                         <a href="https://discord.gg/rwqmYnaSK2" class="button is-ghost is-large" target="_blank">
                             Discord
                         </a>
-                        <?php else: ?>
-                        <a href="https://discord.gg/rwqmYnaSK2" class="button is-primary is-large">
-                            Rejoindre le Discord
-                        </a>
-                        <?php endif; ?>
 
                         <!--<a href="https://twitter.com/PogScience" class="button is-ghost is-large" target="_blank">Twitter</a>-->
                         <a href="communique-presse-generation-sorciers-pogsciences.pdf"
