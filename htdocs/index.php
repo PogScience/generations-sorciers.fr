@@ -9,6 +9,13 @@ require_once '../vendor/autoload.php';
 
 $events = new EventsManager();
 $events->load();
+
+if (isset($_GET['streams_ics'])) {
+    header('Content-type: text/calendar; charset=utf-8');
+    header('Content-Disposition: inline; filename=generations-sorciers.ics');
+    echo $events->calendar()->serialize();
+    die();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

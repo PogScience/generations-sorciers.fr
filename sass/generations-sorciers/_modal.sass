@@ -8,9 +8,13 @@
 details.has-modal
   summary
     list-style: none
+    cursor: pointer
+    &:hover
+      text-decoration: underline
 
     &::marker, &::-webkit-details-marker
       display: none
 
   > .modal
     @extend %fixed-fullscreen
+    text-align: left

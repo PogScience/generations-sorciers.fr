@@ -31,6 +31,35 @@ $tz = new DateTimeZone('Europe/Paris');
                     <p>D'autres événements s'ajouteront…</p>
                 </aside>
                 <?php endif; ?>
+                <aside class="calendar">
+                    <p>
+                    <details class="has-modal">
+                        <summary>Ajouter à votre calendrier</summary>
+
+                        <div class="modal is-active">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <div class="box">
+                                    <article class="content">
+                                        <h3>Ajouter les streams à mon agenda</h3>
+                                        <p>
+                                            Vous pouvez ajouter les streams de Générations Sorciers à votre agenda. Ils
+                                            seront automatiquement mis à jour ! Ajoutez un agenda externe depuis une URL,
+                                            et entrez l'adresse suivante :
+                                        </p>
+                                        <pre class="cal-url">https://generations-sorciers.fr/?streams.ics</pre>
+                                        <p>
+                                            Vous pouvez aussi <a href="/?streams.ics">télécharger le calendrier directement</a>,
+                                            mais il ne sera pas synchronisé en cas de changements.
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                    </details>
+                    </p>
+                </aside>
             </div>
         </div>
 

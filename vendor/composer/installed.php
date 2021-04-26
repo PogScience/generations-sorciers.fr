@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '49b3df6f8c8709afdb5c81ec210dc5c95feceee3',
+    'reference' => '0c98a2ae515f77691e6e7665cb9bc80e99de6051',
     'name' => 'pogscience/generations-sorciers',
   ),
   'versions' => 
@@ -27,7 +27,34 @@
       'aliases' => 
       array (
       ),
-      'reference' => '49b3df6f8c8709afdb5c81ec210dc5c95feceee3',
+      'reference' => '0c98a2ae515f77691e6e7665cb9bc80e99de6051',
+    ),
+    'sabre/uri' => 
+    array (
+      'pretty_version' => '2.2.1',
+      'version' => '2.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f502edffafea8d746825bd5f0b923a60fd2715ff',
+    ),
+    'sabre/vobject' => 
+    array (
+      'pretty_version' => '4.3.5',
+      'version' => '4.3.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd8a0a9ae215a8acfb51afc29101c7344670b9c83',
+    ),
+    'sabre/xml' => 
+    array (
+      'pretty_version' => '2.2.3',
+      'version' => '2.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c3b959f821c19b36952ec4a595edd695c216bfc6',
     ),
     'symfony/deprecation-contracts' => 
     array (

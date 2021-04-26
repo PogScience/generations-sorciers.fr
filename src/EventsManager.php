@@ -1,6 +1,7 @@
 <?php
 namespace PogScience;
 
+use Sabre\VObject;
 use Symfony\Component\Yaml\Yaml;
 
 class EventsManager
@@ -42,5 +43,17 @@ class EventsManager
         foreach ($flat_events as $event) {
             $this->events[$event->date->format("Y-m-d")][] = $event;
         }
+    }
+
+    public function calendar() : VObject\Component\VCalendar {
+        $cal = new VObject\Component\VCalendar();
+
+        foreach ($this->events as $date => $events) {
+            foreach ($events as $event) {
+                $cal->add('VEVENT', $event->as_ical());
+            }
+        }
+
+        return $cal;
     }
 }

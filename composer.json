@@ -5,7 +5,8 @@
     "require": {
         "erusev/parsedown": "^1.7",
         "symfony/yaml": "^5.2",
-        "ext-intl": "*"
+        "ext-intl": "*",
+        "sabre/vobject": "~4.1"
     },
     "license": "CeCILL",
     "authors": [

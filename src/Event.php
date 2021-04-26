@@ -7,6 +7,7 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
 use Parsedown;
+use Sabre\VObject;
 
 class Event
 {
@@ -17,6 +18,7 @@ class Event
     public string $icon;
     public string $with;
     public string $description;
+    private string $raw_description;
     public DateTimeInterface $date;
     public DateInterval $duration;
     public bool $final;
@@ -32,6 +34,7 @@ class Event
         $this->link = substr($raw_event['link'], 0, 4) === 'http' ? $raw_event['link'] : 'https://twitch.tv/' . $raw_event['link'];
         $this->with = isset($raw_event['with']) ? trim($parsedown->line($raw_event['with'])) : "";
         $this->description = isset($raw_event['description']) ? trim($parsedown->text($raw_event['description'])) : "";
+        $this->raw_description = $raw_event['description'] ?? "";
 
         // Updates the timezone without changing the date so PHP uses the correct timezone without shifting the date on
         // timezone change (and ISO date in <time> tags is correct).
@@ -96,5 +99,16 @@ class Event
      */
     private function format_time(DateTimeInterface $date) : string {
         return $date->format('H') . 'h' . ($date->format('i') !== '00' ? $date->format('i') : '');
+    }
+
+    public function as_ical() : array {
+        return [
+            "UID"         => md5($this->dateISO()) . '.generations-sorciers.fr',
+            "SUMMARY"     => strip_tags($this->title),
+            "DESCRIPTION" => 'Par ' . $this->streamer . "\n" . strip_tags($this->with) . "\n\n" . strip_tags($this->raw_description),
+            "LOCATION"    => $this->link,
+            "DTSTART"     => $this->date,
+            "DTEND"       => $this->date->add($this->duration)
+        ];
     }
 }
