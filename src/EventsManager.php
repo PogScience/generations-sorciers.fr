@@ -48,6 +48,15 @@ class EventsManager
     public function calendar() : VObject\Component\VCalendar {
         $cal = new VObject\Component\VCalendar();
 
+        $cal->NAME = 'Générations Sorciers';
+        $cal->DESCRIPTION = 'Tous les streams de l\'événement Générations Sorciers !';
+        $cal->URL = 'https://generations-sorciers.fr';
+        $cal->{'TIMEZONE-ID'} = 'Europe/Paris';
+
+        $cal->{'X-WR-CALNAME'} = 'Générations Sorciers';
+        $cal->{'X-WR-CALDESC'} = 'Tous les streams de l\'événement Générations Sorciers !';
+        $cal->{'X-WR-TIMEZONE'} = 'Europe/Paris';
+
         foreach ($this->events as $date => $events) {
             foreach ($events as $event) {
                 $cal->add('VEVENT', $event->as_ical());
