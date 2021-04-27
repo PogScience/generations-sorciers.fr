@@ -103,7 +103,7 @@ class Event
 
     public function as_ical() : array {
         return [
-            "UID"         => md5($this->dateISO()) . '.generations-sorciers.fr',
+            "UID"         => md5($this->streamer . $this->dateISO()) . '.generations-sorciers.fr',
             "SUMMARY"     => trim(strip_tags($this->title)),
             "DESCRIPTION" => 'Par ' . trim($this->streamer) . ($this->with ?? "\n" . trim(strip_tags($this->with))) . "\n\n" . trim(strip_tags($this->raw_description)),
             "LOCATION"    => $this->link,
