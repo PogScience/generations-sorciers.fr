@@ -21,7 +21,7 @@
 - title: De la maquette au numérique, il n’y a rien de sorcier !
   streamer: ioodyme
   link: ioodyme
-  with: Avec [Qu'est-ce que Tu GEEKes](https://www.twitch.tv/qtgeekes) et Emmanuel Pernoud (jusqu'à 19h30)
+  with: Avec [Qu'est-ce que Tu GEEKes ?](https://www.twitch.tv/qtgeekes) et Emmanuel Pernoud (jusqu'à 19h30)
   description: |
     _Diffusé sur les deux chaînes Twitch en simultané_
 
@@ -42,7 +42,7 @@
   duration: 5 hours 30 minutes
 
 - title: De la maquette au numérique, il n’y a rien de sorcier !
-  streamer: Qu'est-ce que Tu GEEKes
+  streamer: Qu'est-ce que Tu GEEKes ?
   link: qtgeekes
   with: Avec [ioodyme](https://www.twitch.tv/ioodyme) et Emmanuel Pernoud
   description: |
@@ -176,7 +176,7 @@
 
 - title: Sorcellerie d’hier et d’aujourd’hui
   link: qtgeekes
-  streamer: Qu'est-ce que Tu GEEKes
+  streamer: Qu'est-ce que Tu GEEKes ?
   with: Avec Isabelle Hostalery
   description: |
     Évolution des techniques de tournage et de montage de _C'est Pas Sorcier_.
