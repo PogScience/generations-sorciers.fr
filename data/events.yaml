@@ -234,6 +234,7 @@
 - title: React _C’est pas sorcier_ historique
   link: rivenzi
   streamer: Rivenzi
+  with: Avec Sabine Quindou
   description: |
     Analyse et décryptage d’un _C’est pas Sorcier_ traitant d’un thème historique.
   date: 2021-05-01 20:00:00
@@ -244,6 +245,24 @@
   streamer: CastorMother
   with: Avec Sabine Quindou, Lorraine Subra Moreau (réalisatrice) et possiblement Guillaume Jupin (journaliste)
   date: 2021-04-28 18:00:00
+  duration: 2 hours
+
+- title: Découvrir le monde des radiocommunications
+  link: yorzian
+  streamer: Yorzian
+  description: |
+    Même sans matériel ou à tout petit prix, on peut commencer à découvrir le monde de la radio. Entendre une radio qui
+    émet depuis la Chine, voir se déplacer les avions dans le ciel proche, recevoir les signaux d'un satellite. Tout ça
+    est possible, avec peu voire même pas de matériel !
+  date: 2021-04-28 21:00:00
+  duration: 2 hours
+
+- title: _C'est pas Sorcier_ – Le textile
+  link: kathleenfabric
+  streamer: KathleenFabric
+  description: |
+    Réact _C'est pas sorcier_ sur les fibres textiles, puis sur le coton !
+  date: 2021-05-02 16:00:00
   duration: 2 hours
 
 - title: Sorciers Solidaires
