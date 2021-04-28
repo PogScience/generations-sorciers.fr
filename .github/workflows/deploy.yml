@@ -11,7 +11,6 @@ jobs:
     name: Deploy to Gandi
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,7 +20,9 @@ jobs:
         with:
             ssh-private-key: ${{ secrets.GS_SSH_KEY }}
 
-      # Runs a set of commands using the runners shell
+      - name: Add Gandi SSH host to known hosts
+        run: ssh-keyscan -H ${{ secrets.GS_GANDI_SSH_HOST }} > ~/.ssh/known_hosts
+
       - name: Update Gandi repository
         run: |
           git remote add gandi git+ssh://$GANDI_HOST/$GANDI_REPOSITORY
@@ -30,11 +31,10 @@ jobs:
         env:
           GANDI_HOST: ${{ secrets.GS_GANDI_SSH_HOST }}
           GANDI_REPOSITORY: ${{ secrets.GS_GANDI_REPOSITORY }}
-      
+
       - name: Deploy new version to Gandi Simple Hosting
         run: |
           ssh $GANDI_HOST 'deploy $GANDI_REPOSITORY'
         env:
           GANDI_HOST: ${{ secrets.GS_GANDI_SSH_HOST }}
           GANDI_REPOSITORY: ${{ secrets.GS_GANDI_REPOSITORY }}
-  
