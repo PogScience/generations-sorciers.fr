@@ -40,7 +40,7 @@ jobs:
 
       - name: Deploy new version to Gandi Simple Hosting
         run: |
-          ssh $GANDI_HOST 'deploy $GANDI_REPOSITORY'
+          ssh $GANDI_HOST "deploy $GANDI_REPOSITORY"
         env:
           GANDI_HOST: ${{ secrets.GS_GANDI_SSH_HOST }}
           GANDI_REPOSITORY: ${{ secrets.GS_GANDI_REPOSITORY }}
