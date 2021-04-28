@@ -183,21 +183,21 @@
   date: 2021-04-29 20:30:00
   duration: 2 hours
 
-- title: Le concert sorcier
+- title: Les sorciers de la musique
   link: legonfleurdhelice
   streamer: Le Gonfleur d'Hélice
-  with: Avec Kevin Chomat (autres à venir)
+  with: Avec Kevin Chomat
   description: |
-    Concert virtuel par de jeunes artistes, pour passer un bon moment, suivi d'une discussion autour de la place de la
-    musique dans leur crise sanitaire.
+    Live _chill_ discussion autour de la place de la musique la crise sanitaire, et de la situation des intermittent du
+    spectacle.
   date: 2021-04-30 21:00:00
   duration: 2 hours 30 minutes
-  hidden: true
 
 - title: C'est pas Sorcier de l'espace, spécial Ariane 5
   link: spaceexplorerw
   streamer: SpaceExplorerW
   description: Soirée autour du _C'est Pas Sorcier_ sur l'Ariane 5
+  with: Avec Arnaud Demay (ArianeGroup)
   date: 2021-04-30 20:00:00
   duration: 2 hours
 
