@@ -269,7 +269,10 @@
   subtitle: La libre-antenne de clôture avec tout le monde !
   link: collectifconscience
   with: Avec **toute l'équipe *C'est pas Sorcier*** ! Jamy Gourmaud, Fred Courant, Sabine Quindou, Valérie Guerlain (la petite voix), …
-  description:
+  description: |
+    Le stream majeur de Générations Sorciers, avec une dizaine de membre de l'équipe ! Les animateurs historiques bien sûr,
+    mais aussi journalistes, producteurs, réalisateurs, etc. ! Un descriptif plus détaillé de ce stream événement sera disponible
+    prochainement.
   date: 2021-05-03 20:00:00
   duration: 2 hours 30 minutes
   final: true
