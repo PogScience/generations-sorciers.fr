@@ -28,6 +28,8 @@ jobs:
       - name: Update Gandi repository
         run: |
           git remote add gandi git+ssh://$GANDI_HOST/$GANDI_REPOSITORY
+          git config --global user.email "amauy@carrade.eu"
+          git config --global user.name "Amaury Carrade (from GitHub Actions)"
           git pull --rebase gandi master
           git push gandi master
         env:
