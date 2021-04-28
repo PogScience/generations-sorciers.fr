@@ -21,7 +21,7 @@ jobs:
             ssh-private-key: ${{ secrets.GS_SSH_KEY }}
 
       - name: Add Gandi SSH host to known hosts
-        run: ssh-keyscan -H $GANDI_HOST > ~/.ssh/known_hosts
+        run: ssh-keyscan -H ${GANDI_HOST##*@} > ~/.ssh/known_hosts
         env:
           GANDI_HOST: ${{ secrets.GS_GANDI_SSH_HOST }}
 
