@@ -33,7 +33,8 @@ jobs:
           git remote add gandi git+ssh://$GANDI_HOST/$GANDI_REPOSITORY
           git config --global user.email "amauy@carrade.eu"
           git config --global user.name "Amaury Carrade (from GitHub Actions)"
-          git push --force gandi master
+          git pull --rebase gandi master
+          git push gandi master
         env:
           GANDI_HOST: ${{ secrets.GS_GANDI_SSH_HOST }}
           GANDI_REPOSITORY: ${{ secrets.GS_GANDI_REPOSITORY }}
