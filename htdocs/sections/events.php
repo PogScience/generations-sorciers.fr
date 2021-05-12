@@ -5,6 +5,7 @@ function twitch() {
 function caret() {
   include "../svg/caret.svg";
 }
+$film = file_get_contents("../svg/film.svg");
 
 $fmt = new IntlDateFormatter(
     'fr_FR',
@@ -73,7 +74,7 @@ $tz = new DateTimeZone('Europe/Paris');
                 <?php /** @var \PogScience\Event $event */
                 foreach ($day_events as $event): ?>
 
-                    <article class="box<?php if ($event->final) echo ' is-final' ?><?php if ($event->past()) echo ' is-past' ?>">
+                    <article class="box<?php if ($event->final) echo ' is-final' ?><?php if ($event->past() && !$events->all_finished) echo ' is-past' ?>">
                         <details>
                             <summary>
                                 <time datetime="<?php echo $event->dateISO() ?>" class="has-auto-timezone">
@@ -84,7 +85,7 @@ $tz = new DateTimeZone('Europe/Paris');
                                     <h3>
                                         <?php if ($event->live()): ?><a href="<?php echo $event->link ?>" class="live" title="<?php echo strip_tags($event->streamer) ?> est actuellement en direct ! Cliquez pour accéder au live">LIVE</a><?php endif; ?>
                                         <?php if ($event->hidden): ?>[NON PUBLIÉ]<?php endif; ?>
-                                        <a href="<?php echo $event->link ?>"><?php echo $event->title ?></a>
+                                        <a href="<?php echo $event->past() && $event->replay ? $event->replay : $event->link ?>"><?php echo $event->title ?></a>
                                     </h3>
 
                                     <?php if ($event->subtitle): ?>
@@ -92,15 +93,18 @@ $tz = new DateTimeZone('Europe/Paris');
                                     <?php endif ?>
 
                                     <p class="streamers">
-                                        <?php if ($event->streamer): ?>
-                                        <a href="<?php echo $event->link ?>"><?php echo $event->streamer ?></a>
-                                        <?php endif; if ($event->streamer && $event->with): ?>
-                                        &nbsp;&middot;&nbsp;
                                         <?php
-                                            endif;
-                                            if ($event->with):
-                                                echo $event->with;
-                                            endif;
+                                        $meta_items = [];
+                                        if ($event->streamer) {
+                                            $meta_items[] = '<a href="' . $event->link . '">' . $event->streamer . '</a>';
+                                        }
+                                        if ($event->with) {
+                                            $meta_items[] = $event->with;
+                                        }
+                                        if ($event->replay && $event->past()) {
+                                            $meta_items[] = '<a href="' . $event->replay . '" class="replay">' . $film . '&nbsp;Rediffusion</a>';
+                                        }
+                                        echo join(" &nbsp;&middot;&nbsp; ", $meta_items);
                                         ?>
                                     </p>
                                 </div>

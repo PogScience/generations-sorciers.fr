@@ -9,6 +9,7 @@ class EventsManager
     public array $events = [];
     public int $events_count = 0;
     public bool $has_hidden_events = false;
+    public bool $all_finished = true;
 
     public function load() {
         $raw_events = Yaml::parseFile("../data/events.yaml", Yaml::PARSE_DATETIME);
@@ -23,6 +24,10 @@ class EventsManager
                 if (!defined('GS_PREVIEW')) {
                     continue;
                 }
+            }
+
+            if (!$event->past()) {
+                $this->all_finished = false;
             }
 
             $flat_events[] = $event;

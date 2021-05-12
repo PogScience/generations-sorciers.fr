@@ -20,6 +20,8 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
@@ -30,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '0c98a2ae515f77691e6e7665cb9bc80e99de6051',
+    'reference' => '271098c59c6a763b8eb176b71327f16025d0d43d',
     'name' => 'pogscience/generations-sorciers',
   ),
   'versions' => 
@@ -51,7 +53,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '0c98a2ae515f77691e6e7665cb9bc80e99de6051',
+      'reference' => '271098c59c6a763b8eb176b71327f16025d0d43d',
     ),
     'sabre/uri' => 
     array (
@@ -124,7 +126,6 @@ $packages = array();
 foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
-
 
 if (1 === \count($packages)) {
 return $packages[0];
@@ -317,6 +318,7 @@ public static function reload($data)
 self::$installed = $data;
 self::$installedByVendor = array();
 }
+
 
 
 

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0c98a2ae515f77691e6e7665cb9bc80e99de6051',
+    'reference' => '271098c59c6a763b8eb176b71327f16025d0d43d',
     'name' => 'pogscience/generations-sorciers',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0c98a2ae515f77691e6e7665cb9bc80e99de6051',
+      'reference' => '271098c59c6a763b8eb176b71327f16025d0d43d',
     ),
     'sabre/uri' => 
     array (

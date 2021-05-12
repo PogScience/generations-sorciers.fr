@@ -22,6 +22,7 @@ class Event
     public DateTimeInterface $date;
     public DateInterval $duration;
     public bool $final;
+    public string $replay;
     public bool $hidden;
 
     public function __construct(array $raw_event)
@@ -42,6 +43,7 @@ class Event
         $this->duration = DateInterval::createFromDateString($raw_event['duration']);
 
         $this->final = $raw_event['final'] ?? false;
+        $this->replay = $raw_event['replay'] ?? "";
         $this->hidden = $raw_event['hidden'] ?? false;
 
         // The icon is either the `icon` field, or the `link` without `https://twitch.tv/` and with `.png`
