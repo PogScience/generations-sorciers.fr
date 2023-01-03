@@ -58,25 +58,25 @@
         },
         {
             "name": "sabre/uri",
-            "version": "2.2.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/uri.git",
-                "reference": "f502edffafea8d746825bd5f0b923a60fd2715ff"
+                "reference": "eceb4a1b8b680b45e215574222d6ca00be541970"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/uri/zipball/f502edffafea8d746825bd5f0b923a60fd2715ff",
-                "reference": "f502edffafea8d746825bd5f0b923a60fd2715ff",
+                "url": "https://api.github.com/repos/sabre-io/uri/zipball/eceb4a1b8b680b45e215574222d6ca00be541970",
+                "reference": "eceb4a1b8b680b45e215574222d6ca00be541970",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.16.1",
-                "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.0"
+                "friendsofphp/php-cs-fixer": "^3.9",
+                "phpstan/phpstan": "^1.8",
+                "phpunit/phpunit": "^9.0"
             },
             "type": "library",
             "autoload": {
@@ -111,20 +111,20 @@
                 "issues": "https://github.com/sabre-io/uri/issues",
                 "source": "https://github.com/fruux/sabre-uri"
             },
-            "time": "2020-10-03T10:33:23+00:00"
+            "time": "2022-09-19T11:58:52+00:00"
         },
         {
             "name": "sabre/vobject",
-            "version": "4.3.5",
+            "version": "4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/vobject.git",
-                "reference": "d8a0a9ae215a8acfb51afc29101c7344670b9c83"
+                "reference": "1f836740c88bac483f3b572a332eb8fd1cd04981"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/vobject/zipball/d8a0a9ae215a8acfb51afc29101c7344670b9c83",
-                "reference": "d8a0a9ae215a8acfb51afc29101c7344670b9c83",
+                "url": "https://api.github.com/repos/sabre-io/vobject/zipball/1f836740c88bac483f3b572a332eb8fd1cd04981",
+                "reference": "1f836740c88bac483f3b572a332eb8fd1cd04981",
                 "shasum": ""
             },
             "require": {
@@ -215,20 +215,20 @@
                 "issues": "https://github.com/sabre-io/vobject/issues",
                 "source": "https://github.com/fruux/sabre-vobject"
             },
-            "time": "2021-02-12T06:28:04+00:00"
+            "time": "2022-10-09T10:06:31+00:00"
         },
         {
             "name": "sabre/xml",
-            "version": "2.2.3",
+            "version": "2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/xml.git",
-                "reference": "c3b959f821c19b36952ec4a595edd695c216bfc6"
+                "reference": "a6af111850e7536d200d9637c34885cd3c77a86c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/xml/zipball/c3b959f821c19b36952ec4a595edd695c216bfc6",
-                "reference": "c3b959f821c19b36952ec4a595edd695c216bfc6",
+                "url": "https://api.github.com/repos/sabre-io/xml/zipball/a6af111850e7536d200d9637c34885cd3c77a86c",
+                "reference": "a6af111850e7536d200d9637c34885cd3c77a86c",
                 "shasum": ""
             },
             "require": {
@@ -240,19 +240,19 @@
                 "sabre/uri": ">=1.0,<3.0.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.16.1",
+                "friendsofphp/php-cs-fixer": "~2.17.1",
                 "phpstan/phpstan": "^0.12",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.0"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Sabre\\Xml\\": "lib/"
-                },
                 "files": [
                     "lib/Deserializer/functions.php",
                     "lib/Serializer/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Sabre\\Xml\\": "lib/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -284,7 +284,7 @@
                 "issues": "https://github.com/sabre-io/xml/issues",
                 "source": "https://github.com/fruux/sabre-xml"
             },
-            "time": "2020-10-03T10:08:14+00:00"
+            "time": "2021-11-04T06:37:27+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -518,5 +518,5 @@
         "ext-intl": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
