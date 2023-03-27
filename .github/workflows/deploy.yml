@@ -19,7 +19,7 @@ jobs:
             fetch-depth: 0
 
       - name: Setup Gandi SSH key
-        uses: webfactory/ssh-agent@v0.5.2
+        uses: webfactory/ssh-agent@v0.8.0
         with:
             ssh-private-key: ${{ secrets.GS_SSH_KEY }}
 
